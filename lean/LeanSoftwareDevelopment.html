@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./LeanSoftwareDevelopment_files/filelist.xml">
+<title>Lean Software Development</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mark Windholtz</o:Author>
+  <o:Keywords>Lean Software Development, Extreme Programming, XP</o:Keywords>
+  <o:LastAuthor>mark</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>305</o:TotalTime>
+  <o:Created>2002-12-06T23:49:00Z</o:Created>
+  <o:LastSaved>2002-12-06T23:49:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1185</o:Words>
+  <o:Characters>6758</o:Characters>
+  <o:Company>objectwind</o:Company>
+  <o:Lines>56</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>8299</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Lean Software Development</h1>
+
+<h2><span style='font-size:12.0pt;mso-bidi-font-size:14.0pt;font-weight:normal'>Expect
+Zero Defects<o:p></o:p></span></h2>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>- Mark Windholtz, <a href="http://www.objectwind.com/">www.objectwind.com</a>
+</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>$59.5 Billion wasted! <a style='mso-endnote-id:edn1'
+href="#_edn1" name="_ednref1" title=""><span class=MsoEndnoteReference><i><span
+style='mso-bidi-font-size:10.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]>[i]<![endif]></span></span></i></span></a><span
+style="mso-spacerun: yes">  </span>The U.S. gross domestic product loses 0.6% a
+year because of software defects.<span style="mso-spacerun: yes">  </span><i><span
+style='mso-bidi-font-size:10.0pt'>Currently, over half of all errors are not
+found until “downstream” […] or during post-sale software use</span></i>. This
+occurs even though vendors already spend 80% of development costs on defect
+removal.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The software industry is becoming increasingly interested in
+removing defects after they are created.<span style="mso-spacerun: yes"> 
+</span>A focus on defect removal sounds like a good idea.<span
+style="mso-spacerun: yes">  </span>What if the defects are not created in the
+first place? What would that be worth?<span style="mso-spacerun: yes">  
+</span>Is it realistic to suggest that software can be built without
+defects?<span style="mso-spacerun: yes">  </span>Teams using Lean Software
+Development are demonstrating that it can be done.<span style="mso-spacerun:
+yes">  </span>To see what we mean by Lean, let’s start with what is not Lean.</p>
+
+<h3>“Scientific” Project Management<a style='mso-endnote-id:edn2' href="#_edn2"
+name="_ednref2" title=""><span class=MsoEndnoteReference><span
+style='mso-special-character:footnote'><![if !supportFootnotes]>[ii]<![endif]></span></span></a></h3>
+
+<p class=MsoNormal>Henry Ford built his early automobiles using “scientific”
+management techniques.<span style="mso-spacerun: yes">  </span>Every production
+step was optimized for return on investment.<span style="mso-spacerun: yes"> 
+</span>Cars were shipped directly from the factory to the dealer without
+testing them.<span style="mso-spacerun: yes">  </span>The focus was on
+efficient, not quality production.<span style="mso-spacerun: yes">  </span>As
+the auto industry grew factories added testing and repair stations at the end
+of the line to catch defects before the customers did.<span
+style="mso-spacerun: yes">  </span>It was a helpful innovation.<span
+style="mso-spacerun: yes">  </span>Quality assurance became focused on that
+final phase.<span style="mso-spacerun: yes">  </span>When defects were found
+components were disassembled and fixed.<span style="mso-spacerun: yes"> 
+</span>The cost of this re-work was high.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Parallels can be found in how most of the software industry
+builds software today.<span style="mso-spacerun: yes">  </span>Programs are
+either released to the customer for testing, or they are tested as the last
+step before release to the customer.<span style="mso-spacerun: yes"> 
+</span>And much of the current focus of quality assurance is on finding defects
+at the end.<span style="mso-spacerun: yes">  </span>Is it reassuring that we
+are following the same path as the automotive industry?<span
+style="mso-spacerun: yes">  </span>Certainly if we do a good job of testing at
+the end, many of the defects will be caught.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Testing cars at the end does find the defects.<span
+style="mso-spacerun: yes">  </span>But since a mass-production factory produces
+in large batches, many cars are built with the same defect before the defect is
+detected at the end.<span style="mso-spacerun: yes">  </span>Consequently many
+cars need to be re-worked because of the same defect.<span style="mso-spacerun:
+yes">  </span>When cycle time between error, detection, &amp; correction is
+long it causes repeated errors to occur before correction.<span
+style="mso-spacerun: yes">  </span>Now that is expensive! </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Could this be why 80% of development costs are spent on
+defect removal?<span style="mso-spacerun: yes">  </span>If we wait until the
+end of a month-long cycle to test, programmers will introduce similar kinds of
+defects across the system.<span style="mso-spacerun: yes">  </span>Repeated
+defects in software occur when communication with the customer breaks down
+causing multiple wrong features to be built; when wrong assumptions are
+propagated; or when programmers don’t share information among themselves and
+multiple programmers make the same mistake.<span style="mso-spacerun: yes"> 
+</span>These defects show the limitations of long cycle times.</p>
+
+<h3>Lean Manufacturing</h3>
+
+<p class=MsoNormal>In the 1950’s a revolutionary concept was introduced.<span
+style="mso-spacerun: yes">  </span>The Toyota Motor Company began testing at
+every station.<span style="mso-spacerun: yes">  </span>They also reduced batch
+sizes so that cycle time was reduced, defects appeared quickly, and were
+corrected quickly.<span style="mso-spacerun: yes">  </span>When cycle time is
+short, the number of components assembled with the same defect is reduced.<span
+style="mso-spacerun: yes">  </span>This means less rework and lower costs.<span
+style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Still today most software is built in long cycles from three
+months to many years and often not tested until the final step of the
+process.<span style="mso-spacerun: yes">   </span>Lean Software Development
+provides a different vision.<span style="mso-spacerun: yes">  </span>Quick
+cycles, rapid, continuous, automated testing, &amp; close interaction with the
+customer provide the software that the business needs when it is needed.</p>
+
+<h3>Lean Software Development<a style='mso-endnote-id:edn3' href="#_edn3"
+name="_ednref3" title=""><span class=MsoEndnoteReference><span
+style='mso-special-character:footnote'><![if !supportFootnotes]>[iii]<![endif]></span></span></a></h3>
+
+<p class=MsoNormal>The software industry finds itself in a situation today
+similar to automobile manufactures in 1970’s.<span style="mso-spacerun: yes">  
+</span>Defects are sapping resources and angering customers.<span
+style="mso-spacerun: yes">  </span>Defects and long cycle times are reducing
+our ability to respond to new business opportunities.<span style="mso-spacerun:
+yes">  </span>The most heavily marketed solution is to add more bulky process
+steps and to do more testing at the end.<span style="mso-spacerun: yes"> 
+</span>This approach lengthens cycle times.<span style="mso-spacerun: yes"> 
+</span>Meanwhile the Lean approach is delivering successful projects using
+processes with unlikely names like: Scrum, DSDM, and Extreme Programming
+(XP).<span style="mso-spacerun: yes">  </span>Lean Software Development reduces
+defects and cycle times while delivering a steady stream of incremental
+business value.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Cycle time for software development is measured in the
+number of days needed between feature specification and production
+delivery.<span style="mso-spacerun: yes">  </span>This is called: <i>Software
+In Process</i> (SIP)<a style='mso-endnote-id:edn4' href="#_edn4" name="_ednref4"
+title=""><span class=MsoEndnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]>[iv]<![endif]></span></span></a>.<span
+style="mso-spacerun: yes">  </span>A shorter cycle indicates a healthier
+project.<span style="mso-spacerun: yes">  </span>A Lean project that deploys to
+production every 2-weeks has a SIP of 10 working days.<span
+style="mso-spacerun: yes">  </span>Some Lean projects even deploy nightly.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Going to production every 2-weeks may raise fears of
+introducing new defects.<span style="mso-spacerun: yes">  </span>Let’s deal
+with that.<span style="mso-spacerun: yes">  </span>In order to achieve short
+cycle time we need to eliminate defects.<span style="mso-spacerun: yes"> 
+</span>Doesn’t that sound pretty straightforward?<span style="mso-spacerun:
+yes">  </span>Start by expecting zero defect software production.</p>
+
+<h3>Expect Zero Defects</h3>
+
+<p class=MsoNormal>If you expect zero defects a fundamental change in thinking
+occurs.<span style="mso-spacerun: yes">  </span>Do I mean to say that no single
+defect will ever occur?<span style="mso-spacerun: yes">  </span>No.<span
+style="mso-spacerun: yes">  </span>I mean that we treat every defect as
+something really, really bad, and figure out how to prevent that class of
+defect from occurring again.<span style="mso-spacerun: yes">  </span>Lean
+Manufacturing production lines allow each assembly worker to stop the line if a
+defect appears.<span style="mso-spacerun: yes">  </span>Paradoxically, lean
+production lines almost never stop.<span style="mso-spacerun: yes">   </span>In
+“Scientifically Managed” production lines, only the manager can stop the line, yet
+they often crash because defects are not reported creating bigger problems downstream.<span
+style="mso-spacerun: yes">  </span>Expect zero defects and you realize that the
+way you schedule, test, program, and release software all needs to change to
+accomplish your goal.<span style="mso-spacerun: yes">  </span>And since 80% of
+current software project dollars are spent removing defects the goal of Zero
+Defects becomes financially justifiable.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Extreme Programming has a practice of Test-First coding<a
+style='mso-endnote-id:edn5' href="#_edn5" name="_ednref5" title=""><span
+class=MsoEndnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[v]<![endif]></span></span></a>
+that is fundamental in achieving the goal of Zero Defects.<span
+style="mso-spacerun: yes">  </span>Test-First coding requires that an automated
+unit-test is written before the production code and the test-to-code cycle time
+be 5-15 minutes long.<span style="mso-spacerun: yes">  </span>Additionally,
+automated acceptance testing insures that the correct business value is
+delivered.<span style="mso-spacerun: yes">  </span>Acceptance tests are built
+directly from the requirements before the production code is written.<span
+style="mso-spacerun: yes">  </span>All tests are built one at a time
+immediately before each piece of production code. Moving the tests to the front
+of the process gains efficiencies in providing a tight <span style='mso-bidi-font-size:
+10.0pt'>discipline </span>and direction to the team.</p>
+
+<h3>Increasing The Business Payback of Projects</h3>
+
+<p class=MsoNormal>Finally, there are two ways to increase the payback on a
+software project: <b>lower the cost</b> or <b>increase the value</b>.<i><span
+style="mso-spacerun: yes">  </span></i>Lower costs can be accomplished with
+offshore development.<span style="mso-spacerun: yes">  </span>Understandably,
+corporate executives are unhappy with paying high dollar rates for poor quality
+software built locally.<span style="mso-spacerun: yes">  </span>Instead they
+reduce labor costs by moving projects offshore.<span style="mso-spacerun:
+yes">  </span>Offshore programming gets low-cost, &amp; talented programmers to
+produce the same poor quality software as before.<span style="mso-spacerun:
+yes">  </span>Reducing cost increases payback.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>An alternative way to increase payback is to increase
+project value.<span style="mso-spacerun: yes">  </span>This can be realized by
+savings of time to market, closer understanding of the real customer
+requirements, and customer goodwill by providing defect free applications.<span
+style="mso-spacerun: yes">  </span>Lean Software Development provides the
+business case for this approach.<span style="mso-spacerun: yes"> 
+</span>Extreme Programming provides the most popular way to implement Lean
+Software Development.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>A closing thought. In the 1980’s Japanese Lean Auto <span
+style='mso-bidi-font-size:10.0pt'>Manufacturers </span>established engineering
+and production facilities in the U.S.<span style="mso-spacerun: yes"> 
+</span>Did they move development off-(Japanese)-shore for lower U.S. labor
+rates?<span style="mso-spacerun: yes">  </span>No way!<span
+style="mso-spacerun: yes">  </span>They now build cars in Ohio and Michigan, in
+order to be closer to the customer, to ship quicker and to understand more deeply.<span
+style="mso-spacerun: yes">  </span>They moved closer to customers to produce
+more profitably. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The same occurs in companies that adopt Lean Software
+Development.<span style="mso-spacerun: yes">  </span>Offshore may be less
+expensive, but when software is business critical, locally built Lean Software
+Development with short cycle times and low defects are the cost effective
+option.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='font-size:13.0pt;font-family:Arial'>References</span></b>:</p>
+
+</div>
+
+<div style='mso-element:endnote-list'><![if !supportEndnotes]><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<![endif]>
+
+<div style='mso-element:endnote' id=edn1>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn1' href="#_ednref1"
+name="_edn1" title=""><span class=MsoEndnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]>[i]<![endif]></span></span></a> The Economic
+Impacts of Inadequate Infrastructure for Software Testing</p>
+
+<p class=MsoEndnoteText>A report by the National Institute of Standards and
+Technology</p>
+
+<p class=MsoEndnoteText><a href="http://www.rti.org/">http://www.rti.org/</a></p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn2>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn2' href="#_ednref2"
+name="_edn2" title=""><span class=MsoEndnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]>[ii]<![endif]></span></span></a><span
+style="mso-spacerun: yes">  </span>The Machine That Changed the World: The
+Story of Lean Production <br>
+by James P. Womack, et al, 1991</p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn3>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn3' href="#_ednref3"
+name="_edn3" title=""><span class=MsoEndnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]>[iii]<![endif]></span></span></a> <i>Lean
+Development: A Toolkit for Software Development Managers<o:p></o:p></i></p>
+
+<p class=MsoEndnoteText>Mary &amp; Tom Poppendieck<span style="mso-spacerun:
+yes">  </span>(Draft), June 2003</p>
+
+<p class=MsoEndnoteText><a href="http://www.poppendieck.com/ld.htm">www.poppendieck.com/ld.htm</a></p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn4>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn4' href="#_ednref4"
+name="_edn4" title=""><span class=MsoEndnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]>[iv]<![endif]></span></span></a> <i>Software-In-Process,
+A New/Old Project Metric<o:p></o:p></i></p>
+
+<p class=MsoEndnoteText>Kent Beck, Three Rivers Institute</p>
+
+<p class=MsoEndnoteText><a href="http://www.threeriversinstitute.org/">http://www.threeriversinstitute.org/</a></p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn5>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn5' href="#_ednref5"
+name="_edn5" title=""><span class=MsoEndnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]>[v]<![endif]></span></span></a> <i>Test-Driven
+Development, by Example<o:p></o:p></i></p>
+
+<p class=MsoEndnoteText>Kent Beck, June 2003</p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+<p class=MsoEndnoteText><i>The Goal, A Process Of Ongoing Improvement<o:p></o:p></i></p>
+
+<p class=MsoEndnoteText>E. M. Goldratt, 1984</p>
+
+<p class=MsoEndnoteText><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

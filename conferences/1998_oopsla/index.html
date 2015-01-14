@@ -1,0 +1,362 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Email Template</TITLE>
+<META NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Office\EMAIL.DOT">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<FONT FACE="Arial,Helvetica" SIZE=2><P><A NAME="_Toc404997761"><A NAME="_Toc401990802"><A NAME="_Toc403271448"><IMG SRC="Image16.gif" WIDTH=70 HEIGHT=92><IMG SRC="Image17.gif" WIDTH=126 HEIGHT=84></P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=6><P>OOPSLA"98 Trip Report</A></A></B></FONT><FONT FACE="Arial,Helvetica" SIZE=2>, </P>
+<P>Mark Windholtz, 28 October 1998</A></P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4>
+<P>&nbsp;</P>
+<P><A NAME="_Toc434375751"><A NAME="_Toc434377217">Executive Summary</A></A></P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2><DIR>
+
+<P>OOPSLA is the leading conference in Object Oriented Software development.  While much went on at the conference this trip report will only look at three exciting topics from the conference:</P>
+
+<B><I><P>Rational Unified Process</B></I> is Rational's Process for using the Unified Modeling Language (UML).  They are now selling the Rational Unified Process as a product that gives companies a way to use the UML in an iterative process.</P>
+
+<B><I><P>EXtreme Programming</B></I> is a ground breaking new way to structure a development team focused on high quality and high-efficiency.   In the past quality and efficiency have been opposed to each other.  Here is a concept that lets these two forces reinforce each other.  It also provides a high degree of predictability to code development.  Using XP "the cost of change remains constant" throughout the development cycle and into the next release.  XP relies heavily on code Refactoring which is also discussed in this section.</P>
+
+<B><I><P>Aspect Oriented Programming </B></I>is the most important part of this report.  It's my judgement that AOP is the single biggest event in OO since Grady Booch's first article on Object-Oriented Design.  AOP has the potential to solve many of the problems with OO code reuse and the performance problems associated with distribution of Objects.  The application of AOP to Distributed Object Management and Workflow systems is immense.</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica" SIZE=5><P ALIGN="CENTER"></P></DIR>
+
+<P ALIGN="CENTER">Contents</P>
+</I></FONT><FONT SIZE=2><P>Executive Summary&#9;</B></FONT><A HREF="#_Toc434377217">*</A>
+<B><FONT SIZE=2><P>Introduction to OOPSLA&#9;</B></FONT><A HREF="#_Toc434377218">*</A></P>
+<B><FONT SIZE=2><P>Rational Unified Process&#9;</B></FONT><A HREF="#_Toc434377219">*</A></P>
+<B><FONT SIZE=2><P>EXtreme Programming.&#9;</B></FONT><A HREF="#_Toc434377220">*</A></P>
+<B><FONT SIZE=2><P>Aspect Oriented Programming.&#9;</B></FONT><A HREF="#_Toc434377221">*</A></P><DIR>
+
+<FONT SIZE=2><P>Example of an Installation Program&#9;</FONT><A HREF="#_Toc434377222">*</A></P>
+<FONT SIZE=2><P>Visitor Pattern Solution&#9;</FONT><A HREF="#_Toc434377223">*</A></P>
+<FONT SIZE=2><P>Visitor Pattern Limitations&#9;</FONT><A HREF="#_Toc434377224">*</A></P>
+<FONT SIZE=2><P>The First AOP Solution&#9;</FONT><A HREF="#_Toc434377225">*</A></P>
+<FONT SIZE=2><P>The Second AOP Solution&#9;</FONT><A HREF="#_Toc434377226">*</A></P>
+<FONT SIZE=2><P>Summing Up AOP&#9;</FONT><A HREF="#_Toc434377227">*</A></P></DIR>
+
+<B><FONT SIZE=2><P>OOPSLA"98 Conclusion&#9;</B></FONT><A HREF="#_Toc434377228">*</A></P>
+<B><FONT SIZE=2><P>References&#9;</B></FONT><A HREF="#_Toc434377229">*</A></P>
+<FONT FACE="Arial,Helvetica" SIZE=2></P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4><P><A NAME="_Toc401990803"><A NAME="_Toc403271449"><A NAME="_Toc404997762"><A NAME="_Toc404997881"><A NAME="_Toc405801845"><A NAME="_Toc405801941"><A NAME="_Toc405802084"><A NAME="_Toc405802182"><A NAME="_Toc434375750"><A NAME="_Toc434377218">Introduction</A></A></A></A></A></A></A></A> to OOPSLA<IMG SRC="Image18.gif" WIDTH=70 HEIGHT=92></A></A></P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>OOPSLA is the ACM's (Association for Computing Machinery) annual conference for <B><I>Object Oriented Programming Systems Languages and Architecture</B></I>.  While many computer conferences concern products and techniques that you can buy, OOPSLA conferences have always pointed the way to the newest practical and developing ideas in Object Oriented development.  In some ways OOPSLA is much more practical in helping product development than other conferences because of OOPSLA focuses on problems and solutions.   A programmer or manager can take ideas from an OOPSLA tutorial and make an immediate contribution to a current development project.  That same programmer may return from a product-oriented conference and only be able to make a recommendation to purchase some product.  OOPSLA is a best-practices conference.  The presenters and panelists are people who build commercial systems using the latest developments in software. </P>
+
+<P>OOPSLA"98 was held in Vancouver BC and had 2612 attendees this year.  That’s roughly 400 more than last year.</P>
+<P>&nbsp;</P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4><P><A NAME="_Toc434375752"><A NAME="_Toc434377219"><IMG SRC="Image19.gif" WIDTH=135 HEIGHT=109>Rational Unified Process</A></A></P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2>
+<P>The trip report from OOPSLA'96 announced the end of the OO Design Notation Wars.  This year the place of the Rational Unified Modeling Language (UML) was confirmed.  UML is king of the road.  However, when attempting to <I>use</I> UML it becomes clear that more is needed than just a notation.  Therefore, Rational has taken Ivar Jacobson's Object-Oriented Software Engineering Methodology [1992] (formerly known as Objectory), and adapted it to UML.  Recently, they renamed the methodology to </FONT><I><FONT FACE="Arial,Helvetica">the <B>R</B>ational <B>U</B>nified <B>P</B>rocess</I></FONT><FONT FACE="Arial,Helvetica" SIZE=2>.  No one said the acronym <I>RUP</I> but my guess is that it may change the name again to make for a better acronym.</P>
+
+<P>RUP tries to synthesis a decade of industry experience in Object Oriented development techniques.  The Phases of the software development process are no longer Analysis-Design-Implementation.   These three (Analysis-Design-Implementation) have been converted into processes that run in parallel.  The phases of development are now Inception-Elaboration-Construction-Transition.  These correspond to the phases of getting the original idea (Inception), working-out the rough architecture and project plan (Elaboration), building the software over multiple iterations  (Construction), packaging and customer installation (Transition).</P>
+
+<P>During each one of these stages various simultaneous development processes take place involving Requirements Capture, Analysis &amp;Design, Implementation, and Testing.    A secondary set of processes manages the development processes.  These secondary processes include Management, Environment, and Deployment.</P>
+<P><IMG SRC="Image20.gif" WIDTH=539 HEIGHT=304></P>
+<P>Within each Phase iterations occur.  These iterations set specific entry and exit conditions on the path to a complete solution.  And every iteration involves all the process components.  At first it may seem like a bad thing to plan for Requirements Capture as late in the development cycle as Transition.  It may seem like we are admitting we don't know what we are building because we are planning to change the product even as it is going out the door.  While this may be an embarrassing thing to admit, it is almost always the true way that software is delivered.   What the RUP allows is a way to measure and control the way in which most companies are already producing software. </P>
+
+<P>Iterative development is not a new way of developing software as much as it is an optimized and documented form of what has been taking place in the industry already.  Rational is licensing RUP as a product.  Licensing a process may seem like a unique idea, but consulting companies like Arthur Anderson have licensed process for quite some time already.</P>
+
+<P>One emphasis of iterative development is to test your ideas as soon as possible.  This is a valuable way to reduce risk.  This advice also applies not just to code construction but also to Architecture and Design.  Architecture should be tested in real code soon after it is considered.  The real code can be as simple as some very small example code or proof of concept.  But it should be tested early.  After it works then you can plan to make it work bigger and better.  This is a very appropriate transition to the next topic.  Extreme Programming takes the concept of risk mitigation to the its logical conclusion. </P>
+
+<P>&nbsp;</P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4><P><A NAME="_Toc434375753"></P>
+<P><A NAME="_Toc434377220"><IMG SRC="Image21.gif" WIDTH=100 HEIGHT=99>EXtreme Programming.</A></A></P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2><DIR>
+
+</FONT><FONT SIZE=2><P>EXtreme Programming (XP) is the name that Kent Beck has given to the lightweight team process which he has been evolving over the years.</P>
+<P>In XP, we use a very lightweight combination of practices to create a team that can rapidly produce extremely reliable, efficient, well-factored software. Many of the XP practices were created and tested as part of the Chrysler C3 project, which is a very successful payroll system implemented in Smalltalk </P><DIR>
+
+<P>- Ron Jefferies.</P>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>A number of the big names in OO took a fresh look at the dynamics, costs, and risks of software development in an era when a completely new set of tools are available for OO development.   The XP advocates at the after-hours meeting were<I> Martin Fowler, Ward Cunningham, Kent Beck, </I>and<I> Ron Jefferies</I>.   Rather than repeating habits of the past with modern tools, they advocate letting loose in some areas and tightening the software discipline in other areas.  The new mix has been very successful in the few areas that it has so far been practiced.   The XP folks question the old economics of the software development lifecycle.  It is commonly believed that the later in the process a bug is found (or a requirement added), the higher the cost of correcting the oversight.   XP however points out that requirement change and bug discovery are never-ending so instead of optimizing the process to be a better predictor of unknowable changes XP is optimized to react to changes.  In this way, the cost of change is brought down not by planning but by highly flexible reactions.   This is accomplished by using new tools such as the following:</P>
+
+
+<UL>
+<LI>The </FONT><A HREF="http://st-www.cs.uiuc.edu/users/brant/Refactory/RefactoringBrowser.html"><FONT FACE="Arial,Helvetica" SIZE=2>Refactoring Browser</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2> which is an editor that lets you make refactoring changes to the code while guaranteeing that the code will not break.  For less sophisticated development environments refactoring has to take place manually.  In that case, developers will want to watch for Martin Fowler's next book which details the </FONT><A HREF="http://www2.awl.com/cseng/titles/0-201-89542-0/refactor/index.html"><FONT FACE="Arial,Helvetica" SIZE=2>common types of refactoring</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2> and how to do it safely. </LI>
+<LI>Kent Beck's testing framework </FONT><A HREF="http://www.armaties.com/testfram.htm"><FONT FACE="Arial,Helvetica" SIZE=2>for Smalltalk or C++</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2>  (or for </FONT><A HREF="http://members.pingnet.ch/gamma/junit-10.zip"><FONT FACE="Arial,Helvetica" SIZE=2>Java</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2>).</LI>
+<LI>High function development environment of </FONT><A HREF="http://www.software.ibm.com/ad/"><FONT FACE="Arial,Helvetica" SIZE=2>IBM-VisualAge</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2>. </LI>
+<LI></FONT><A HREF="http://www.gemstone.com/"><FONT FACE="Arial,Helvetica" SIZE=2>Gemstone's</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2> Object Database flexibly manages persistent object versioning thereby allowing them to update schemas on a daily basis without effecting their objects already in production.   </LI>
+<LI>The dynamic programming language </FONT><A HREF="http://www.stic.org/"><FONT FACE="Arial,Helvetica" SIZE=2>Smalltalk</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2> provides the final part to their high-efficiency puzzle</LI></UL>
+
+
+<P>There was quite a bit of audience discussion about if XP was even possible without the modern tool sets that they have assembled.  Ward Cunningham suggested that it could even be possible in a C++ environment where compile-link-load cycles still take place but XP may feel a little different.</P>
+
+<P>Some of the interesting things they are doing on the publicly discussed Chrysler project are weekly releases into production, two people per keyboard gives immediate code reviews, never planning abstractions in advance lowers the risk of unneeded design elements, constant refactoring of the code base.</P>
+
+<P>The following is a transcription of the handout the XP folks provided.  To understand XP one needs to understand the whole picture together.  So it's best if you get that in their own words:</P>
+<DIR>
+
+</FONT><FONT SIZE=2><P>Recognizing that the cost of changing a program no longer grows exponentially over time, XP relies on complex interactions between simple development practices to reduce project risk, improve responsiveness to business and technical learning and make programming more fun.</P>
+
+<P>80% of the value of XP comes from the </FONT><B>last</B><FONT SIZE=2> 20% of the practices.  You are doing XP only if you adopt all of the practices together.  You may have a fabulous development discipline, but it isn't XP.</P>
+</DIR>
+
+
+<UL>
+<B><LI>Split Business and Technical </B>- the customer chooses the scope of the next release and sets the priorities among requirements.  The developers estimate the time required to implement the requirements and to schedule within a release.  This works best with small releases.</LI>
+<B><LI>Small Releases </B>- The customer chooses the smallest, most valuable set of requirements to put into production next.  This works best if the design is simple so the cycle can be as short as possible.</LI>
+<B><LI>Simple Design - </B>At all times, the system has the simplest design that runs all the test cases- no code duplication, no unnecessary classes or methods.  This works best if you are prepared to constantly evolve the design through refactoring.</LI>
+<B><LI>Testing - </B>Developers write and satisfy unit tests for all development.  Customers write the functional tests for each requirement.  This works best if you program in pairs so you don't forget to write the test under pressure.</LI>
+<B><LI>Pair Programming - </B>All production code is written with two people sitting at the same machine, passing the keyboard back and forth.  This works best if you constantly refractor the code wherever it needs cleaning up so everyone knows a little bit about the whole system.</LI>
+<B><LI>Refactoring -</B> Pairs bring code back to simplicity the instant they see that it has drifted away.  This works best if development episodes are no more than a few hours, after which the results are integrated with the rest of the system.</LI>
+<B><LI>Continuous Integration -</B> The system is built and successfully tested several times a day - in fact, each time a pair gets the test cases for a simple development task running.  This works best if you can run the tests immediately to verify the quality of the new system.</LI>
+<B><LI>Collective Code Ownership -</B> Code is fixed wherever it is found to be deficient.  This only works if you can run the tests afterwards to gain confidence that nothing was broken.</LI></UL>
+
+</FONT><FONT FACE="Arial,Helvetica" SIZE=2>
+<P>See Also:</P>
+<P>Extreme Programming  </FONT><A HREF="http://www.armaties.com/Practices/PracLeadin.htm"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.armaties.com/Practices/PracLeadin.htm</FONT></A></P>
+<FONT FACE="Arial,Helvetica" SIZE=2><P>Wiki-Web Discussions </FONT><A HREF="http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap"><FONT FACE="Arial,Helvetica" SIZE=2>http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap</FONT></A></P>
+<B><FONT FACE="Arial,Helvetica" SIZE=2>
+</B><P>&nbsp;</P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4><P>&nbsp;</P>
+<P> <A NAME="_Toc434375754"><A NAME="_Toc434377221"><IMG SRC="Image22.gif" WIDTH=111 HEIGHT=144>Aspect Oriented Programming.</A></A> </P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2>
+<P>AOP is being developed at Xerox Labs in Palo Alto.  The prime motivation of Xerox is the more efficient use and programming of networked resources to manage documents.  This is of obviously applicable to all companies developing document management or workflow applications.  But the value of AOP can be demonstrated to apply to most areas of Object Oriented development.</P>
+
+<P>Here is the abstract the AOP folks wrote:</P>
+<DIR>
+<DIR>
+
+</FONT><B><FONT SIZE=2><P ALIGN="JUSTIFY">Abstract</P>
+</B><P ALIGN="JUSTIFY">Achieving clean modularity in programs that involve multi-object protocols, error handling, complex performance optimizations or other systemic or cross-cutting concerns is known to be quite difficult. Typically, the implementation of these concerns ends up being tangled throughout the code, resulting in systems that are difficult to develop, understand and maintain.</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">AspectJ(tm) is an aspect-oriented extension to Java that enables programmers to implement these kinds of cross-cutting concerns in clean, modular ways. The general-purpose aspect construct makes it possible to capture in a modular unit issues that involve several classes. A special tool called an aspect weaver automatically links the aspects with the rest of the program</FONT><FONT FACE="Arial,Helvetica" SIZE=2>.</P>
+
+<P>&nbsp;</P></DIR>
+</DIR>
+
+
+<UL>
+<LI>Have you ever designed really good OO code and applied some appropriate Design Patterns [Gamma95]?  Have you noticed that the code for a Pattern is spread among a number of your classes?  Of course, that's how it's supposed to be.  A Pattern helps us understand the interaction between classes, so the code will necessarily be spread among various classes.  Still, it would be nicer if it were all in one place.</LI></UL>
+
+
+
+<UL>
+<LI>Have you ever written code to cleanly model some business objects, and then needed to make your beautifully clean design thread safe?  Often you end up putting the same code in the different places to guarantee safety and aliveness.  Wouldn't it be nice to put that code in one place.</LI></UL>
+
+
+
+<UL>
+<LI>Have you ever needed to put lots of reporting code into your classes for debugging purposes?  Later when you find the problem you need to go though lots of code and take out the reporting code.  This too would be nice to put in on single place.  </LI></UL>
+
+
+
+<UL>
+<LI>Have you ever worked with Java and wished that it had helpful software engineering features like pre-conditions, post-conditions, and class invariants?  These can be faked in C++ with macros, implemented in Smalltalk Meta classes, and are part of the language definition in Eiffel.  But they require lots of hand coding in standard Java.</LI></UL>
+
+
+<P>These are some of the many concerns that Aspect Oriented Programming helps with.  </P>
+<P>An Aspect is a special kind of class that provides a way to define code in one place that would otherwise occur in multiple places.  This immediately raises the question: "Isn't that the problem that Object-Orientation was supposed to fix in the first place?"</P>
+
+<P>Yes it is!  Object-Orientation (done right) helps reduce the amount of duplicate code in a program.  Object-Orientation reduced the code so that we can now see other kinds of duplication emerging.   Where OO reduced one kind of code duplication Aspects reduce a newly discovered kind of code duplication.  OO added a second dimension to code reuse; AOP add a third dimension to code reuse.</P>
+
+<P>This report is not a full tutorial on AOP.  But hopefully it can give a taste of how AOP is implemented.  I will be giving some presentations on AOP in the near future.   The presentations will describe more examples and AOP and the syntax of AspectJ.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica"><P><A NAME="_Toc434375755"><A NAME="_Toc434377222">Example of an Installation Program</A></A></P>
+</B></I></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>The following example looks at a typical design problem.  Solves the problem with Patterns, and uncovers the new area of code duplication.  Then the example applies AOP to show two shorter solutions to the design problem. </P>
+
+<P>So suppose we want to write an install program for the ABC program on a distributed network with heterogeneous Operating Systems and Hardware. </P>
+<P>The ABC program runs on multiple computers.  Some of the computers are servers and some are clients.  Servers need to know their clients.  And clients need to know the single server they connect to.</P>
+
+<P>For each component of the ABC program the installation program needs to check each Site and install the particular component according to the particular configuration of the Site.</P>
+
+<P>class  ProcessorSite {</P>
+<P>  private IPAddress  ip;</P>
+<P>  private ProcessorType processor;</P>
+<P>}</P>
+
+<I><P>Note</I>: the class definitions in the code examples are not complete.  In each of the sections I've shown only the part of the class definition that was relevant to the current point.  It would have been unnecessarily confusing to show all the code all the time.</P>
+<P> </P>
+<P>class ServerSite extends ProcessorSite {</P>
+<P>&#9;private Vector clients;</P>
+<P>&#9;private ServerConfiguration sConfig;</P>
+<P>}</P>
+
+<P>class ClientSite extends ProcessorSite {</P>
+<P>&#9;private ServerSite myServer;</P>
+<P>&#9;private ClientConfiguration cConfig;</P>
+<P>}</P>
+
+<P>&nbsp;</P>
+<P>Our first thought might be to put methods in ClientSite and in ServerSite that would know how to install each of the various components.  </P>
+
+<P>class ServerSite extends ProcessorSite {</P>
+
+<P>&#9;void installDLL( String dll ) { /* ...  */ }</P>
+<P>&#9;void installShareLib( String so)   { /* ...  */ }</P>
+<P>&#9;void installExe(String exe) { /* ...  */ }</P>
+<P>    &#9;void installUnixExe(String exe) { /* ...  */ }</P>
+<P>}</P>
+
+<P>This starts to clutter-up the class ServerSite very quickly.  We would also need to add these methods to ClientSite. We need functions that will be called for a Unix install and some methods that will be called for a Windows install.  Worse than that though is that it is hard to extend.  Suppose that later we need to install on a Macintosh.  Suppose that we need to install a Java application.  This additional behavior would require that we add code to both the class ServerSite and to class ClientSite and possibly to class ProcessorSite.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica"><P><A NAME="_Toc434375756"><A NAME="_Toc434377223"><IMG SRC="Image23.gif" WIDTH=71 HEIGHT=93>Visitor Pattern Solution</A></A></P>
+</B></I></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>A standard Visitor Pattern as described in the ubiquitous Design Patterns Reference [Gamma95] helps to standardize this kind of access.  Instead of having methods in the various Site classes repeated for each kind of component, we can put that functionality into a Visitor class.  The parts of the Site hierarchy would then be stable even if other types of components and operating Systems needed to be added later.  </P>
+
+<P>class  ProcessorSite {</P>
+<P>&#9;abstract void accept( SiteVisitor v);</P>
+<P>}</P>
+
+<P>class ServerSite extends ProcessorSite {</P>
+<P>&#9;void accept( SiteVisitor v) { v.visitServerSite(this); }</P>
+<P>}</P>
+
+<P>class ClientSite extends ProcessorSite {</P>
+<P>&#9;void accept( SiteVisitor v) { v.visitClientSite(this); }</P>
+<P>}</P>
+
+<P>And we would build the needed functionality into a new SiteVisitor hierarchy.</P>
+
+<P>abstract class SiteVisitor {</P>
+<P>&#9;abstract void visitServerSite(ServerSite server);</P>
+<P>&#9;abstract void visitClientSite(ClientSite client);</P>
+<P>}</P>
+
+<P>class DLLInstallVisitor extends SiteVisitor {</P>
+<P>&#9;void visitServerSite(ServerSite server) { /* install DDLs on a Server */ }</P>
+<P>&#9;void visitClientSite(ClientSite client) { /* install DLLs on a Client */ }</P>
+<P>}</P>
+
+<P>class SharedLibInstallVisitor extends SiteVisitor {</P>
+<P>&#9;void visitServerSite(ServerSite server) { /* install Shared Libs on a Server*/ }</P>
+<P>&#9;void visitClientSite(ClientSite client) { /* install Shared Libs on a Client */ }</P>
+<P>}</P>
+
+<P>And to run a visitor through the set of Sites looks like this:</P>
+
+<P>installDLLs(ProcessorSite mainSite )</P>
+<P>{</P>
+<P>&#9;DLLInstallVisitor DLL_vis =  new DLLInstallVisitor();</P>
+<P>&#9;MainSite.accept(DLL_vis);</P>
+<P>}</P>
+
+<P>Now we can cleanly add more types of components without disturbing the original classes that provide a model of the Sites.  For instance, the following visitor would allow us to modify environment or Registry info for each Site.</P>
+
+<P>class ModifySysInfoVisitor extends SiteVisitor {</P>
+<P>&#9;void visitServerSite(ServerSite server) { /* Modify the system info on a Server*/ }</P>
+<P>&#9;void visitClientSite(ClientSite client) { /* Modify the system info on a Client */ }</P>
+<P>}</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica"><P><A NAME="_Toc434375757"><A NAME="_Toc434377224">Visitor Pattern Limitations</A></A></P>
+</B></I></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>So far so good.  The Visitor pattern is a good proven solution that has been used for over 15 years and well documented for over 5 years.  We are still left with the uncomfortable need to put the accept() method into the Site model.  And this is scattered around the class hierarchy.  Scattering the accept() method around the hierarchy violates encapsulation and raise concerns about separation of concerns.  </P>
+<P>Also, if we need to add a new type to the Site Framework we will need to do extensive work on the Visitor framework.  We will need to add a new method to each Visitor for the new Site type.  For example, suppose we want to add a SuperComputerSite to our network.  </P>
+
+<P>abstract class SiteVisitor {</P>
+<P>&#9;abstract void visitServerSite(ServerSite server);</P>
+<P>&#9;abstract void visitClientSite(ClientSite client);</P>
+<P> &#9;// new method </P>
+<P>&#9;abstract void visitSuperComputerSite(SuperComputer superDuper);</P>
+<P>}</P>
+
+<P>We also have to add this method to every subclass of SiteVisitor in order to provide an implementation.</P>
+
+<P>To recap, the Visitor pattern allows us to add functionality to an existing framework without changing the original the framework.  This provides a nice seperation of concerns.  However, in order to use the Visitor Pattern we still cause some interface pollution because we need to add the accept() method.   It would be nice if we could also separate concerns of the Visitor pattern from the otherwise clean model.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica"><P><A NAME="_Toc434375758"><A NAME="_Toc434377225">The First AOP Solution</A></A></P>
+</B></I></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>Below I've repeated the original implementation of the Site Hierarchy in its cleanest form.</P>
+
+<P>class  ProcessorSite {</P>
+<P>  private IPAddress  ip;</P>
+<P>  private ProcessorType processor;</P>
+<P>  // ...</P>
+<P>}</P>
+
+<P>class ServerSite extends ProcessorSite {</P>
+<P>&#9;private Vector clients;</P>
+<P>&#9;private ServerConfiguration sConfig;</P>
+<P>}</P>
+
+<P>class ClientSite extends ProcessorSite {</P>
+<P>&#9;private ServerSite myServer;</P>
+<P>&#9;private ClientConfiguration cConfig;</P>
+<P>}</P>
+
+<P>With AspectJ we can then define a Visitor aspect for this hierarchy below:</P>
+
+<P>aspect VisitorAspect {</P>
+
+<P>&#9;introduce ProcessorSite.accept() {</P>
+<P>&#9;abstract void accept( SiteVisitor v);</P>
+<P>&#9;}</P>
+
+<P>&#9;introduce ClientSite.accept(), ServerSite.accept() {</P>
+<P>&#9;void accept( SiteVisitor v)    {</P><DIR>
+
+<P>&#9;v.visitClientSite (thisObject); </P></DIR>
+
+<P>&#9;}</P>
+<P>&#9;}</P>
+
+<P>&#9;introduce  ServerSite.accept() {</P>
+<P>&#9;void accept( SiteVisitor v)    {</P><DIR>
+
+<P>&#9;v.visitServerSite (thisObject); </P></DIR>
+
+<P>&#9;}</P>
+<P>&#9;}</P>
+<P>} // end of VisitorAspect</P>
+
+<P>You still develop the Visitor code the same as before. &#9;The advantage to this form of AOP is that we have removed the accept() method from the Site hierarchy and placed it in one unit.  This makes it easier to understand and change.</P>
+<P>Unfortunately we still need to create and maintain the Visitor hierarchy when applying this aspect.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica"><P><A NAME="_Toc434375759"><A NAME="_Toc434377226">The Second AOP Solution</A></A></P>
+</B></I></FONT><FONT FACE="Arial,Helvetica" SIZE=2>
+<P>There is a second way to implement an AOP solution that removes the need to code the Visitor hierarchy.   Unfortunately I don't have the code for that implementation.  I'll update this section of the report as soon as I can get a code example.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial,Helvetica"><P><A NAME="_Toc434375760"><A NAME="_Toc434377227">Summing Up AOP</A></A></P>
+</B></I></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>This report gave a brief look at Aspect Oriented Programming (AOP).  It could be the next major development in Object Oriented development.  AOP adds a 3<SUP>rd</SUP> dimension to software development and gives us a way to separately code cross-cutting concerns.</P>
+<P>&nbsp;</P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4><P><A NAME="_Toc434375761"><A NAME="_Toc434377228">OOPSLA"98 Conclusion<IMG SRC="Image24.gif" WIDTH=69 HEIGHT=91></A></A></P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2><P>OOPSLA is the most important conference for Object Oriented software development.   OOPSLA is valuable to developers and managers alike.  The exciting ideas from this year's conference included the Rational Unified Process, Extreme programming, and especially Aspect Oriented Programming.  </P>
+</FONT><B><FONT FACE="Arial,Helvetica" SIZE=4><P><A NAME="_Toc434375762"><A NAME="_Toc434377229">References<IMG SRC="Image16.gif" WIDTH=70 HEIGHT=92></A></A></P>
+</B></FONT><FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>Aspect-Oriented Programming:   </FONT><A HREF="http://www.parc.xerox.com/spl/projects/aop/"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.parc.xerox.com/spl/projects/aop/</FONT></A></LI></UL>
+
+<FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>Extreme Programming </FONT><A HREF="http://www.armaties.com/Practices/PracLeadin.htm"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.armaties.com/Practices/PracLeadin.htm</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI>Wiki-Web Discussions </FONT><A HREF="http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap"><FONT FACE="Arial,Helvetica" SIZE=2>http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap</FONT></A></LI></UL>
+
+<FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>OOPSLA 1998: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla98/index.htm"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla98/index.htm</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI>OOPSLA 1999: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.acm.org/sigplan/oopsla/</FONT></A></LI></UL>
+
+<FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>Rational </FONT><A HREF="http://www.rational.com/"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.rational.com</FONT></A></LI></UL>
+
+<FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>[Gamma95] Design Patterns -Elements of reusable Object-Oriented Software; Gamma et al; Addison-Wesley 1995. </FONT><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201633612/o/qid=909695901/sr=2-1/002-2535960-6464215"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.amazon.com/exec/obidos/ASIN/0201633612/o/qid=909695901/sr=2-1/002-2535960-6464215</FONT></A></LI></UL>
+
+<FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>[Kic91] <I>The Art of the Meta-object Protocol</I>; Geagor Kiczales et al.; MIT Press 1991 </FONT><A HREF="http://www.amazon.com/exec/obidos/ASIN/0262610744/qid%3D909696027/002-2535960-6464215"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.amazon.com/exec/obidos/ASIN/0262610744/qid%3D909696027/002-2535960-6464215</FONT></A></LI></UL>
+
+<FONT FACE="Arial,Helvetica" SIZE=2>
+
+<UL>
+<LI>Refactoring Browser </FONT><A HREF="http://st-www.cs.uiuc.edu/users/brant/Refactory/RefactoringBrowser.html"><FONT FACE="Arial,Helvetica" SIZE=2>http://st-ww.cs.uiuc.edu/users/brant/Refactory/RefactoringBrowser.html</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI>Common types of refactoring  </FONT><A HREF="http://www2.awl.com/cseng/titles/0-201-89542-0/refactor/index.html"><FONT FACE="Arial,Helvetica" SIZE=2>http://www2.awl.com/cseng/titles/0-201-89542-0/refactor/index.html</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI>Kent Beck's testing framework for Smalltalk and C++ </FONT><A HREF="http://www.armaties.com/testfram.htm"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.armaties.com/testfram.htm</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI>Kent Beck's testing framework for Java </FONT><A HREF="http://members.pingnet.ch/gamma/junit-10.zip"><FONT FACE="Arial,Helvetica" SIZE=2>http://members.pingnet.ch/gamma/junit-10.zip</FONT></A><FONT FACE="Arial,Helvetica" SIZE=2> </LI></UL>
+
+
+<UL>
+<LI>IBM VisualAge </FONT><A HREF="http://www.software.ibm.com/ad/"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.software.ibm.com/ad/</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI> Gemstone  </FONT><A HREF="http://www.gemstone.com/"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.gemstone.com</FONT></A></LI>
+<FONT FACE="Arial,Helvetica" SIZE=2><LI> Smalltalk Industry Council </FONT><A HREF="http://www.stic.org/"><FONT FACE="Arial,Helvetica" SIZE=2>http://www.stic.org</FONT></A></LI></UL>
+</BODY>
+</HTML>

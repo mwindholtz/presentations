@@ -1,0 +1,2543 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./LeanCaseStudy_files/filelist.xml">
+<link rel=Edit-Time-Data href="./LeanCaseStudy_files/editdata.mso">
+<link rel=OLE-Object-Data href="./LeanCaseStudy_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Lean Software Development</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mark Windholtz</o:Author>
+  <o:Keywords>Lean Software Development, Extreme Programming, XP</o:Keywords>
+  <o:LastAuthor>mark</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>260</o:TotalTime>
+  <o:Created>2003-01-20T23:20:00Z</o:Created>
+  <o:LastSaved>2003-01-20T23:20:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>6160</o:Words>
+  <o:Characters>35115</o:Characters>
+  <o:Company>objectwind</o:Company>
+  <o:Lines>292</o:Lines>
+  <o:Paragraphs>70</o:Paragraphs>
+  <o:CharactersWithSpaces>43123</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:20.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex4, li.MsoIndex4, div.MsoIndex4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex6, li.MsoIndex6, div.MsoIndex6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex7, li.MsoIndex7, div.MsoIndex7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.5in;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{mso-style-next:"Index 1";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.n, li.n, div.n
+	{mso-style-name:n;
+	mso-style-parent:"Heading 6";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:20.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:907038369;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1605931318 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1305308108;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1691578804 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1550610690;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2010795546 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1723211675;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1881607806 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1888714137;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1348525066 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><a name="_Toc30151021"></a><a name="_Toc30219978"></a><a name="_Toc30411946"></a><a
+name="_Toc30412082"></a><a name="_Toc30412112"></a><a name="_Toc30421235"></a><a
+name="_Toc30421740"></a><a name="_Toc30566803"></a><a name="_Toc30566956"></a><a
+name="_Toc30567293"></a><a name="_Toc30567377"></a><a name="_Toc30574918"><span
+style='mso-bookmark:_Toc30567377'><span style='mso-bookmark:_Toc30567293'><span
+style='mso-bookmark:_Toc30566956'><span style='mso-bookmark:_Toc30566803'><span
+style='mso-bookmark:_Toc30421740'><span style='mso-bookmark:_Toc30421235'><span
+style='mso-bookmark:_Toc30412112'><span style='mso-bookmark:_Toc30412082'><span
+style='mso-bookmark:_Toc30411946'><span style='mso-bookmark:_Toc30219978'><span
+style='mso-bookmark:_Toc30151021'><span style="mso-spacerun: yes"> </span></span></span></span></span></span></span></span></span></span></span></span></a><a
+name="_Toc30744719"><span style='mso-bookmark:_Toc30151021'><span
+style='mso-bookmark:_Toc30219978'><span style='mso-bookmark:_Toc30411946'><span
+style='mso-bookmark:_Toc30412082'><span style='mso-bookmark:_Toc30412112'><span
+style='mso-bookmark:_Toc30421235'><span style='mso-bookmark:_Toc30421740'><span
+style='mso-bookmark:_Toc30566803'><span style='mso-bookmark:_Toc30566956'><span
+style='mso-bookmark:_Toc30567293'><span style='mso-bookmark:_Toc30567377'><span
+style='mso-bookmark:_Toc30574918'>Case Study of Lean Software Development</span></span></span></span></span></span></span></span></span></span></span></span></a></h1>
+
+<p class=MsoNormal>by Mark Windholtz, <a href="http://www.objectwind.com/">www.objectwind.com</a>
+</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>[Current revision 20 Jan 2003<span style="mso-spacerun:
+yes">  </span>3:20pm]</p>
+
+<p class=MsoNormal>----------------------------------------------------------------------------------------------------</p>
+
+<h5><a name="_Toc30566804">Contents</a></h5>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 431.5pt'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style="mso-spacerun:
+yes"> </span>TOC \o &quot;1-3&quot; \h \z <span style='mso-element:field-separator'></span><![endif]--><span
+class=MsoHyperlink><a href="#_Toc30744719">Case Study of Lean Software
+Development<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744719 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700310039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744720">Lean Software Development<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744720 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-style:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744721">Expect Zero Defects<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744721 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744722">Lean and Extreme<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744722 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744723">Increased Business Value<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744723 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744724">Two Case Studies<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744724 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744725">Case Study 1: Spare Parts Logistics
+Case Study (SPL)<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744725 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-style:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744726">Motivation for Process Change<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744726 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744727">SPL Approach<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744727 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744728">SPL Approach Detail<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744728 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744729">Project #1 Highlights<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744729 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700320039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744730">Case Study 2: Spare Parts Logistics
+– Forecasting (SPL-F) Team<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744730 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700330030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-style:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744731">Project 2 Highlights<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744731 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>22</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700330031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744732">Wrap up<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744732 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>37</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700330032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744733">Lean Principles and XP Practices<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744733 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>38</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700330033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-style:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc30744734">Summary<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc30744734 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>60</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330030003700340034003700330034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-style:normal'><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>----------------------------------------------------------------------------------------------------</p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes"> </span></p>
+
+<p class=MsoNormal>$59.5 Billion is wasted every year<a style='mso-endnote-id:
+edn1' href="#_edn1" name="_ednref1" title=""><span class=MsoEndnoteReference>[RTI
+2002]</span></a>.<span style="mso-spacerun: yes">  </span>That’s a lot of <i>muda!</i><span
+style="mso-spacerun: yes">  </span>The U.S. gross domestic product loses 0.6% a
+year because of software defects.<span style="mso-spacerun: yes">  </span><i><span
+style='mso-bidi-font-size:10.0pt'>Currently, over half of all errors are not
+found until “downstream” […] or during post-sale software use</span></i>. This
+occurs even though vendors already spend 80% of development costs on defect
+removal.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The software industry is becoming increasingly interested in
+removing defects after they are created.<span style="mso-spacerun: yes"> 
+</span>A focus on defect removal sounds like a good idea.<span
+style="mso-spacerun: yes">  </span>What if the defects are not created in the
+first place? What would that be worth?<span style="mso-spacerun: yes">  
+</span>Is it realistic to suggest that software can be built without
+defects?<span style="mso-spacerun: yes">  </span>Teams using Lean Software
+Development are demonstrating that it can be done.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc30151022"></a><a name="_Toc30219979"></a><a name="_Toc30411947"></a><a
+name="_Toc30412083"></a><a name="_Toc30412113"></a><a name="_Toc30421236"></a><a
+name="_Toc30421741"></a><a name="_Toc30566805"></a><a name="_Toc30566957"></a><a
+name="_Toc30567294"></a><a name="_Toc30567378"></a><a name="_Toc30574919"></a><a
+name="_Toc30744720"><span style='mso-bookmark:_Toc30574919'><span
+style='mso-bookmark:_Toc30567378'><span style='mso-bookmark:_Toc30567294'><span
+style='mso-bookmark:_Toc30566957'><span style='mso-bookmark:_Toc30566805'><span
+style='mso-bookmark:_Toc30421741'><span style='mso-bookmark:_Toc30421236'><span
+style='mso-bookmark:_Toc30412113'><span style='mso-bookmark:_Toc30412083'><span
+style='mso-bookmark:_Toc30411947'><span style='mso-bookmark:_Toc30219979'><span
+style='mso-bookmark:_Toc30151022'>Lean Software Development</span></span></span></span></span></span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>The software industry finds itself in a situation today
+similar to automobile manufactures in 1970’s.<span style="mso-spacerun: yes">  
+</span>Defects are sapping resources and angering customers.<span
+style="mso-spacerun: yes">  </span>Defects and long cycle times are reducing
+our ability to respond to new business opportunities.<span style="mso-spacerun:
+yes">  </span>The most heavily marketed solution is to add more bulky process
+steps and to do more testing at the end.<span style="mso-spacerun: yes"> 
+</span>This approach lengthens cycle times.<span style="mso-spacerun: yes"> 
+</span>Meanwhile the Lean approach is delivering successful projects using
+processes with unlikely names like: Scrum, DSDM, Crystal Clear, and Extreme
+Programming (XP).<span style="mso-spacerun: yes">  </span>Currently the most
+documented and popular of these processes is Extreme Programming.<span
+style="mso-spacerun: yes">  </span>Lean Software Development reduces defects
+and cycle times while delivering a steady stream of incremental business value.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Feature cycle time for software development can be measured
+in the number of days needed between feature specification and production
+delivery.<span style="mso-spacerun: yes">  </span>This is called: <i>Software
+In Process</i> (SIP)<span class=MsoEndnoteReference> <a style='mso-endnote-id:
+edn2' href="#_edn2" name="_ednref2" title="">[Beck 02]</a></span>.<span
+style="mso-spacerun: yes">  </span>A shorter cycle indicates a healthier
+project.<span style="mso-spacerun: yes">  </span>A Lean project that deploys to
+production every 2-weeks has a SIP of 10 working days.<span
+style="mso-spacerun: yes">  </span>Some Lean projects even deploy nightly.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Going to production every 2-weeks may raise fears of
+introducing new defects.<span style="mso-spacerun: yes">  </span>Good.<span
+style="mso-spacerun: yes">  </span>Let’s deal with that.<span
+style="mso-spacerun: yes">  </span>In order to achieve short cycle time we must
+eliminate defects.<span style="mso-spacerun: yes">  </span>Doesn’t that sound
+pretty straightforward?<span style="mso-spacerun: yes">  </span>Start by
+expecting zero defect software production.</p>
+
+<h3><a name="_Toc30151023"></a><a name="_Toc30219980"></a><a name="_Toc30411948"></a><a
+name="_Toc30412084"></a><a name="_Toc30412114"></a><a name="_Toc30421237"></a><a
+name="_Toc30421742"></a><a name="_Toc30566806"></a><a name="_Toc30566958"></a><a
+name="_Toc30567295"></a><a name="_Toc30567379"></a><a name="_Toc30574920"></a><a
+name="_Toc30744721"><span style='mso-bookmark:_Toc30574920'><span
+style='mso-bookmark:_Toc30567379'><span style='mso-bookmark:_Toc30567295'><span
+style='mso-bookmark:_Toc30566958'><span style='mso-bookmark:_Toc30566806'><span
+style='mso-bookmark:_Toc30421742'><span style='mso-bookmark:_Toc30421237'><span
+style='mso-bookmark:_Toc30412114'><span style='mso-bookmark:_Toc30412084'><span
+style='mso-bookmark:_Toc30411948'><span style='mso-bookmark:_Toc30219980'><span
+style='mso-bookmark:_Toc30151023'>Expect Zero Defects</span></span></span></span></span></span></span></span></span></span></span></span></a></h3>
+
+<p class=MsoNormal>If you expect zero defects a fundamental change in thinking
+occurs.<span style="mso-spacerun: yes">  </span>Does this mean that no single
+defect will ever occur?<span style="mso-spacerun: yes">  </span>No.<span
+style="mso-spacerun: yes">  </span>It means that we treat every defect as
+something truly unacceptable and change the process to prevent that class of
+defect from occurring again.<span style="mso-spacerun: yes">  </span>This is
+very different from rhetorically claiming that defects are unacceptable and
+exhorting everyone to work harder with the same Multi-Phase processes. </p>
+
+<p class=MsoNormal>Lean Manufacturing production lines allow each assembly
+worker to stop the line if a defect appears.<span style="mso-spacerun: yes"> 
+</span>Paradoxically, lean production lines almost never stop.<span
+style="mso-spacerun: yes">   </span>In “Scientifically Managed” production
+lines, only the manager can stop the line, yet they often crash because defects
+are not reported creating bigger problems downstream.<span style="mso-spacerun:
+yes">  </span>Expect zero defects and you realize that the way you schedule,
+test, program, and release software all needs to change to accomplish your
+goal.<span style="mso-spacerun: yes">  </span>And since 80% of current software
+project dollars are spent removing defects the goal of Zero Defects becomes
+financially justifiable.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>It has long been recommend that before typing, programmers
+think about the problem at hand. Traditionally this has taken the form of an
+Analysis phase.<span style="mso-spacerun: yes">  </span>There are two
+inefficiencies in the Analysis Phase.<span style="mso-spacerun: yes"> 
+</span>The first is that it is a <i>phase.</i><span style="mso-spacerun: yes"> 
+</span>A phase implies a substantial period of time.<span style="mso-spacerun:
+yes">  </span>That then implies a long feedback loop, long cycle time, and
+large batch sizes.<span style="mso-spacerun: yes">  </span>All of these are bad
+news when you are thinking Lean.<span style="mso-spacerun: yes">  </span>The
+second is that there is no definable goal or deliverable to Analysis.<span
+style="mso-spacerun: yes">  </span>The value of Analysis is not clearly
+defined.<span style="mso-spacerun: yes">  </span>If the goal is to: <i>Think
+about the Problem not the Solution</i> when is that thinking guaranteed to be
+complete?<span style="mso-spacerun: yes">  </span>Often documents are written
+in special notation and at some point the analysts think they have done enough
+and stop.<span style="mso-spacerun: yes">  </span>Another aspect of definable
+goal that is missing is definable quality measurements.<span
+style="mso-spacerun: yes">  </span>What is the acceptable quality level of an
+Analysis effort?<span style="mso-spacerun: yes">  </span>How can this be
+measured?<span style="mso-spacerun: yes">  </span>This is all very troubling
+because to program correct code we <i>do need</i> to understand the problem
+first.<span style="mso-spacerun: yes">   </span>And to be lean we need to
+deliver in small batches in order to maintain Flow and allow Pull.<span
+style="mso-spacerun: yes">  </span>The answer lies in translating requirements
+one requirement at a time (to maintain small batch size) into repeatable automated
+tests.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The Extreme Programming process has a practice of Test-First
+coding<span class=MsoEndnoteReference> <a style='mso-endnote-id:edn3'
+href="#_edn3" name="_ednref3" title="">[Beck 03]</a></span> that is fundamental
+in achieving the goal of Zero Defects.<span style="mso-spacerun: yes"> 
+</span>Test-First coding requires that an automated unit-test be written before
+the production code.<span style="mso-spacerun: yes">  </span>The test-to-code
+cycle time is 5-15 minutes long.<span style="mso-spacerun: yes">  </span>A
+standard unit test framework called xUnit has been implemented in over 58
+programming languages (available for free at: <a
+href="http://www.xprogramming.com/software.htm">www.xprogramming.com/software.htm</a>).</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Additionally, automated up-front acceptance testing insures
+that the correct business value is delivered.<span style="mso-spacerun: yes"> 
+</span>Acceptance tests are built directly from the requirements before the
+production code is written.<span style="mso-spacerun: yes">  </span>All tests
+are built one at a time immediately before each piece of production code.
+Moving the tests to the front of the process gains efficiencies in providing a
+tight <span style='mso-bidi-font-size:10.0pt'>discipline </span>and direction
+to the team.<span style="mso-spacerun: yes">  </span>As of this writing a
+promising Acceptance testing framework called fit is available as a beta
+release. <a style='mso-endnote-id:edn4' href="#_edn4" name="_ednref4" title=""><span
+class=MsoEndnoteReference>[Fit]</span></a> </p>
+
+<h3><a name="_Toc30151032"></a><a name="_Toc30219994"></a><a name="_Toc30411957"></a><a
+name="_Toc30412093"></a><a name="_Toc30412123"></a><a name="_Toc30421258"></a><a
+name="_Toc30421764"></a><a name="_Toc30566815"></a><a name="_Toc30566959"></a><a
+name="_Toc30567296"></a><a name="_Toc30567380"></a><a name="_Toc30574921"></a><a
+name="_Toc30744722"><span style='mso-bookmark:_Toc30574921'><span
+style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'>Lean and Extreme</span></span></span></span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'> </span></span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'>Extreme
+Programming (XP) is a set of best practices that were found to work in real
+projects.<span style="mso-spacerun: yes">  </span>XP practices were developed
+pragmatically. The practices were tested and modified until they fit together.<span
+style="mso-spacerun: yes">  </span>XP is a bottom-up process developed by
+programmers.<span style="mso-spacerun: yes">   </span>It works well.<span
+style="mso-spacerun: yes">  </span>However, is difficult to explain to the
+uninitiated, <b><i>why </i></b>it works.<span style="mso-spacerun: yes">  
+</span>Michael Hill once remarked: “XP works in practice but not in
+theory”.<span style="mso-spacerun: yes">  </span>So true. </span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'>Lean
+Manufacturing also started bottom-up.<span style="mso-spacerun: yes">  
+</span>In the late1950’s when Taiichi Ohno improved the time to change the
+manufacturing dies from one day to 3 minutes</span></span></span></span></span></span></span></span></span></span></span><a
+style='mso-endnote-id:edn5' href="#_edn5" name="_ednref5" title=""><span
+style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'><span class=MsoEndnoteReference>[WoJo 91]</span></span></span></span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'>.<span style="mso-spacerun: yes">   
+</span>Later, the term “Lean” was coined by John Krafcik to explain why this
+new way of building cars worked so well.<span style="mso-spacerun: yes">  
+</span>The theory of<span style="mso-spacerun: yes">  </span>“Lean Thinking”
+matured and was applied to both manufacturing and even the design of new
+products. </span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'><i>Lean
+Thinking</i></span></span></span></span></span></span></span></span></span></span></span><a
+style='mso-endnote-id:edn6' href="#_edn6" name="_ednref6" title=""><span
+style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'><span class=MsoEndnoteReference>[WoJo 96]</span></span></span></span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'> defines the 5 principles of: Value, Value
+Stream, Flow, Pull, &amp; Perfection.<span style="mso-spacerun: yes"> 
+</span>The principles have been applied to many successful businesses in fields
+from textbook publishing (AtomicDog.com) to travel (SouthWest Airlines).<span
+style="mso-spacerun: yes">   </span>The principles of Lean closely match what
+the practices that XP deliver.<span style="mso-spacerun: yes">  </span>(Lean
+principles and XP practices are compared at the end of this article). Yet Lean
+Thinking gives the XP practitioner added tools to explain XP productivity and
+integrate XP into the full range of business concerns. </span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30567380'><span
+style='mso-bookmark:_Toc30567296'><span style='mso-bookmark:_Toc30566959'><span
+style='mso-bookmark:_Toc30566815'><span style='mso-bookmark:_Toc30421764'><span
+style='mso-bookmark:_Toc30421258'><span style='mso-bookmark:_Toc30412123'><span
+style='mso-bookmark:_Toc30412093'><span style='mso-bookmark:_Toc30411957'><span
+style='mso-bookmark:_Toc30219994'><span style='mso-bookmark:_Toc30151032'>It is
+the model of Lean Software Development that explains why a business should
+program Lean.<span style="mso-spacerun: yes">  </span>For example, consider the
+artifacts of the software process.<span style="mso-spacerun: yes"> 
+</span>Consider the expense that goes into creating those artifacts.<span
+style="mso-spacerun: yes">  </span>Could these artifacts be inventory?<span
+style="mso-spacerun: yes">  </span>The Lean Thinking identifies inventory with
+waste.<span style="mso-spacerun: yes">  </span>So it would be best to figure
+out how to minimize artifacts.<span style="mso-spacerun: yes">  </span>XP
+provides the techniques needed to reduce inventory and software in process.</span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc30567380'><span style='mso-bookmark:_Toc30567296'><span
+style='mso-bookmark:_Toc30566959'><span style='mso-bookmark:_Toc30566815'><span
+style='mso-bookmark:_Toc30421764'><span style='mso-bookmark:_Toc30421258'><span
+style='mso-bookmark:_Toc30412123'><span style='mso-bookmark:_Toc30412093'><span
+style='mso-bookmark:_Toc30411957'><span style='mso-bookmark:_Toc30219994'><span
+style='mso-bookmark:_Toc30151032'><a name="_Toc30574922"></a><a
+name="_Toc30744723"><span style='mso-bookmark:_Toc30574922'>Increased Business
+Value</span></a></span></span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>There are two ways to increase the business value on a
+software project: <b>lower the cost</b> or <b>increase the value</b>.<i><span
+style="mso-spacerun: yes">  </span></i>Lower costs can be accomplished with
+offshore development. <span style="mso-spacerun: yes"> </span>Understandably,
+corporate executives are unhappy with paying high dollar rates for poor quality
+software built locally.<span style="mso-spacerun: yes">  </span>Instead they
+reduce labor costs by moving projects offshore.<span style="mso-spacerun:
+yes">  </span>Offshore programming gets low-cost &amp; talented programmers to
+produce the same poor quality software as before.<span style="mso-spacerun:
+yes">  </span>Reducing cost increases payback.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>An alternative way to increase payback is to increase
+project value.<span style="mso-spacerun: yes">  </span>This can be realized by
+savings of time to market, closer understanding of the real customer
+requirements, and customer goodwill by providing defect free applications.<span
+style="mso-spacerun: yes">  </span>Lean Software Development provides the
+business rationale for this approach.<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In the 1980’s Japanese Lean Auto <span style='mso-bidi-font-size:
+10.0pt'>Manufacturers </span>established engineering and production facilities
+in the U.S.<span style="mso-spacerun: yes">  </span>Did they move development
+off-(Japanese)-shore for lower U.S. labor rates?<span style="mso-spacerun:
+yes">  </span>No way!<span style="mso-spacerun: yes">  </span>They now build
+cars in Ohio and Michigan, in order to be closer to the customer, to ship
+quicker and to understand more deeply.<span style="mso-spacerun: yes"> 
+</span>They moved closer to customers to produce more profitably. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The same occurs when companies adopt Lean Software
+Development.<span style="mso-spacerun: yes">  </span>Offshore may be less
+expensive, but when software is business critical, locally built Lean Software
+Development with short cycle times and low defects are the cost effective option.</p>
+
+<h1><a name="_Toc30151024"></a><a name="_Toc30219981"></a><a name="_Toc30411949"></a><a
+name="_Toc30412085"></a><a name="_Toc30412115"></a><a name="_Toc30421238"></a><a
+name="_Toc30421743"></a><a name="_Toc30566807"></a><a name="_Toc30566960"></a><a
+name="_Toc30567297"></a><a name="_Toc30567381"></a><a name="_Toc30574923"></a><a
+name="_Toc30744724"><span style='mso-bookmark:_Toc30574923'><span
+style='mso-bookmark:_Toc30567381'><span style='mso-bookmark:_Toc30567297'><span
+style='mso-bookmark:_Toc30566960'><span style='mso-bookmark:_Toc30566807'><span
+style='mso-bookmark:_Toc30421743'><span style='mso-bookmark:_Toc30421238'><span
+style='mso-bookmark:_Toc30412115'><span style='mso-bookmark:_Toc30412085'><span
+style='mso-bookmark:_Toc30411949'><span style='mso-bookmark:_Toc30219981'><span
+style='mso-bookmark:_Toc30151024'>Two Case Studies</span></span></span></span></span></span></span></span></span></span></span></span></a></h1>
+
+<h2><a name="_Toc30151025"></a><a name="_Toc30219982"></a><a name="_Toc30411950"></a><a
+name="_Toc30412086"></a><a name="_Toc30412116"></a><a name="_Toc30421239"></a><a
+name="_Toc30421744"></a><a name="_Toc30566808"></a><a name="_Toc30566961"></a><a
+name="_Toc30567298"></a><a name="_Toc30567382"></a><a name="_Toc30574924"></a><a
+name="_Toc30744725"><span style='mso-bookmark:_Toc30574924'><span
+style='mso-bookmark:_Toc30567382'><span style='mso-bookmark:_Toc30567298'><span
+style='mso-bookmark:_Toc30566961'><span style='mso-bookmark:_Toc30566808'><span
+style='mso-bookmark:_Toc30421744'><span style='mso-bookmark:_Toc30421239'><span
+style='mso-bookmark:_Toc30412116'><span style='mso-bookmark:_Toc30412086'><span
+style='mso-bookmark:_Toc30411950'><span style='mso-bookmark:_Toc30219982'><span
+style='mso-bookmark:_Toc30151025'>Case Study 1: </span></span></span></span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc30744725'><span style='mso-bookmark:_Toc30574924'><span
+style='mso-bookmark:_Toc30567382'><span style='mso-bookmark:_Toc30567298'><span
+style='mso-bookmark:_Toc30566961'><span style='mso-bookmark:_Toc30566808'><span
+style='mso-bookmark:_Toc30421744'><span style='mso-bookmark:_Toc30421239'><span
+style='mso-bookmark:_Toc30412116'><span style='mso-bookmark:_Toc30412086'><span
+style='mso-bookmark:_Toc30411950'><span style='mso-bookmark:_Toc30219982'><span
+style='mso-bookmark:_Toc30151025'><span style='font-style:normal'>Spare</span>
+Parts Logistics Case Study</span></span></span></span></span> (SPL)</span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>The Spare Parts Logistics (SPL) project was an 18-month
+project extending a legacy 5 million LOC logistics system.<span
+style="mso-spacerun: yes">  </span>The purpose of SPL was to compute depot
+stock levels of spare parts for items worldwide and to minimize
+backorders.<span style="mso-spacerun: yes">  </span>The customer organization
+had millions of parts belonging to tens of thousands of units of equipment that
+were frequently moved among depot locations.<span style="mso-spacerun: yes"> 
+</span>SPL was an extension of the Previous Logistics Project (PLP).<span
+style="mso-spacerun: yes">  </span>The names have been all been changed for
+obvious reasons.<span style="mso-spacerun: yes">  </span>The contract was based
+on Time and Materials but strong emphasis was placed on delivering on time and
+budget.<span style="mso-spacerun: yes">  </span>Missing the date or budget
+would threaten additional contracts expected to provide years of future work.<a
+name="_Toc3711359"></a><a name="_Toc3713262"></a><a name="_Toc3864441"></a><a
+name="_Toc3110039"></a><a name="_Toc3110117"></a><a name="_Toc3110463"></a><a
+name="_Toc3711358"></a><a name="_Toc3713261"></a><a name="_Toc3864440"></a><a
+name="_Toc3110038"></a><a name="_Toc3110116"></a><a name="_Toc3110462"></a><a
+name="_Toc3711357"></a><a name="_Toc3713260"></a><a name="_Toc3864439"><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'><span style='mso-bookmark:_Toc3864441'><span
+style='mso-bookmark:_Toc3713262'><span style='mso-bookmark:_Toc3711359'></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></p>
+
+<h3><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+style='mso-bookmark:_Toc3864440'><span style='mso-bookmark:_Toc3713261'><span
+style='mso-bookmark:_Toc3711358'><span style='mso-bookmark:_Toc3110463'><span
+style='mso-bookmark:_Toc3110117'><span style='mso-bookmark:_Toc3110039'><span
+style='mso-bookmark:_Toc3864441'><span style='mso-bookmark:_Toc3713262'><span
+style='mso-bookmark:_Toc3711359'><a name="_Toc30151026"></a><a
+name="_Toc30219983"></a><a name="_Toc30411951"></a><a name="_Toc30412087"></a><a
+name="_Toc30412117"></a><a name="_Toc30421240"></a><a name="_Toc30421745"></a><a
+name="_Toc30566809"></a><a name="_Toc30566962"></a><a name="_Toc30567299"></a><a
+name="_Toc30567383"></a><a name="_Toc30574925"></a><a name="_Toc30744726"><span
+style='mso-bookmark:_Toc30574925'><span style='mso-bookmark:_Toc30567383'><span
+style='mso-bookmark:_Toc30567299'><span style='mso-bookmark:_Toc30566962'><span
+style='mso-bookmark:_Toc30566809'><span style='mso-bookmark:_Toc30421745'><span
+style='mso-bookmark:_Toc30421240'><span style='mso-bookmark:_Toc30412117'><span
+style='mso-bookmark:_Toc30412087'><span style='mso-bookmark:_Toc30411951'><span
+style='mso-bookmark:_Toc30219983'><span style='mso-bookmark:_Toc30151026'>Motivation
+for Process Change</span></span></span></span></span></span></span></span></span></span></span></span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'>Lean Software Development was introduced
+because of the difficulty experienced in the Previous Logistics Project
+(PLP).<span style="mso-spacerun: yes">   </span>The PLP had difficulty with
+code integration and poor software quality resulting in a 700% cost overrun, a
+200% schedule overrun, and a generally miserable experience of everyone.<span
+style="mso-spacerun: yes">  </span>These effects were not foreseen because PLP
+used a phased waterfall process that indicated to upper management that the
+project had been going very smoothly.<span style="mso-spacerun: yes"> 
+</span>Phases were time-boxed and milestone defined for the 12 month long
+project.<span style="mso-spacerun: yes">  </span>Milestones were set for the
+phases of Requirements, Analysis, Design, Detailed Design, Code Construction,
+In-house Testing, and Customer Testing.<span style="mso-spacerun: yes"> 
+</span>Each Milestone was accomplished successfully.<span style="mso-spacerun:
+yes">  </span>However, during Customer Testing it was revealed that the code
+modules would not work together.<span style="mso-spacerun: yes">  </span>While
+this was a nasty surprise for management, the programmers themselves had long
+been expressing concerns.<span style="mso-spacerun: yes">  </span>Programmer
+concerns remained un-addressed by tech-leads eager to push the forward though
+hard work and extra effort.<span style="mso-spacerun: yes">  </span>Because of
+defects, a second 12 months were spent under very unpleasant, high-pressure
+conditions re-working the application in order to pass the Customer Test phase.<span
+style="mso-spacerun: yes">  </span>Eventually, PLP passed the Customer tests
+and went into production.<span style="mso-spacerun: yes">  </span>The system
+crashed repeatedly over the course of 4 weeks costing a million dollars a day
+in system outage costs and threatening legal action.<span style="mso-spacerun:
+yes">  </span>Even the Customer tests were not sufficiently comprehensive.<span
+style="mso-spacerun: yes">  </span>And major defects first appeared in
+production. </span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'>How does this occur?<span style="mso-spacerun:
+yes">  </span>The reward system for the company was geared toward delivering to
+milestones.<span style="mso-spacerun: yes">  </span>Milestones and Phases were
+linked to individual compensation.<span style="mso-spacerun: yes">  </span>So
+it was in everyone’s interest to push the product passed the next Phase.<span
+style="mso-spacerun: yes">  </span>These are similarities here in how
+traditional automotive manufacturers produce inventory and Push it onto their
+customer using various incentives.<span style="mso-spacerun: yes">  </span>A
+system built around “Push” often results in unpredictable sub-optimal
+behavior.<span style="mso-spacerun: yes">  </span>In the end PLP was repaired
+and continued running in production.</span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'>Management concluded that a different approach
+was needed.<span style="mso-spacerun: yes">  </span>A Lean Software Development
+approach based on XP would be used for the next development project.<span
+style="mso-spacerun: yes">  </span>So while using the same software environment
+in the same company culture SPL went to production on time and on budget with
+no major defects.<span style="mso-spacerun: yes">  </span>In fact, it was four
+days in production before the first minor (level 4) defect was reported.<span
+style="mso-spacerun: yes">  </span>Undoubtedly, Lean thinking produced a
+dramatic turn around.</span></span></span></span></span></span></span></span></span></span></span></span><span
+style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+style='mso-bookmark:_Toc3864440'><span style='mso-bookmark:_Toc3713261'><span
+style='mso-bookmark:_Toc3711358'><span style='mso-bookmark:_Toc3110463'><span
+style='mso-bookmark:_Toc3110117'><span style='mso-bookmark:_Toc3110039'><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3864440'><span
+style='mso-bookmark:_Toc3713261'><span style='mso-bookmark:_Toc3711358'><span
+style='mso-bookmark:_Toc3110463'><span style='mso-bookmark:_Toc3110117'><span
+style='mso-bookmark:_Toc3110039'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+style='mso-bookmark:_Toc3864440'><span style='mso-bookmark:_Toc3713261'><span
+style='mso-bookmark:_Toc3711358'><span style='mso-bookmark:_Toc3110463'><span
+style='mso-bookmark:_Toc3110117'><span style='mso-bookmark:_Toc3110039'><a
+name="_Toc30151027"></a><a name="_Toc30219984"></a><a name="_Toc30411952"></a><a
+name="_Toc30412088"></a><a name="_Toc30412118"></a><a name="_Toc30421241"></a><a
+name="_Toc30421746"></a><a name="_Toc30566810"></a><a name="_Toc30566963"></a><a
+name="_Toc30567300"></a><a name="_Toc30567384"></a><a name="_Toc30574926"></a><a
+name="_Toc30744727"><span style='mso-bookmark:_Toc30574926'><span
+style='mso-bookmark:_Toc30567384'><span style='mso-bookmark:_Toc30567300'><span
+style='mso-bookmark:_Toc30566963'><span style='mso-bookmark:_Toc30566810'><span
+style='mso-bookmark:_Toc30421746'><span style='mso-bookmark:_Toc30421241'><span
+style='mso-bookmark:_Toc30412118'><span style='mso-bookmark:_Toc30412088'><span
+style='mso-bookmark:_Toc30411952'><span style='mso-bookmark:_Toc30219984'><span
+style='mso-bookmark:_Toc30151027'>SPL Approac</span></span></span></span></span></span></span></span></span></span></span></span></a></span></span></span></span></span></span><span
+style='mso-bookmark:_Toc30744727'><span style='mso-bookmark:_Toc30574926'><span
+style='mso-bookmark:_Toc30567384'><span style='mso-bookmark:_Toc30567300'><span
+style='mso-bookmark:_Toc30566963'><span style='mso-bookmark:_Toc30566810'><span
+style='mso-bookmark:_Toc30421746'><span style='mso-bookmark:_Toc30421241'><span
+style='mso-bookmark:_Toc30412118'><span style='mso-bookmark:_Toc30412088'><span
+style='mso-bookmark:_Toc30411952'><span style='mso-bookmark:_Toc30219984'><span
+style='mso-bookmark:_Toc30151027'>h</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>The SPL development team applied a highly
+controlled and disciplined approach to Lean Software Development.<span
+style="mso-spacerun: yes">  </span>This approach is summarized by two
+imperatives: Working code and Conversing People.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><i style='mso-bidi-font-style:normal'><u>Working
+Code</u> </i><span style='mso-bidi-font-style:italic'>assures that Flow is
+preserved</span><i style='mso-bidi-font-style:normal'>.<span
+style="mso-spacerun: yes">  </span></i><span style='mso-bidi-font-style:italic'>Working
+code </span>means that all code is tested by automated tests, and all work is
+integrated with the whole team multiple times a day.<span style="mso-spacerun:
+yes">  </span>The code worked and it all worked together all the time. This
+feedback cycle gave project leadership a high degree of certainty on the true
+progress of the project.<span style="mso-spacerun: yes">  </span>At project
+completion 2400 tests were written and running successfully.<span
+style="mso-spacerun: yes">  </span>Working code provided a medium for measuring
+Flow of features though the team.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><i style='mso-bidi-font-style:normal'><u>Conversing
+People</u></i> assures that waste is minimized.<span style="mso-spacerun:
+yes">  </span>Conversing People means that we recognize that the highest
+quality of communication is face-to-face</span></span></span></span></span></span><a
+style='mso-endnote-id:edn7' href="#_edn7" name="_ednref7" title=""><span
+style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+class=MsoEndnoteReference>[Co 02]</span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'>.<span
+style="mso-spacerun: yes">  </span>All too often committing lists of issues to
+paper slows down communication, prevents questions, and adds administrative
+work.<span style="mso-spacerun: yes">  </span>Excessive reliance on
+intermediate documentation can easily become a source of process waste.<span
+style="mso-spacerun: yes">  </span>Documentation lacks a feedback cycle of
+question and answer.<span style="mso-spacerun: yes">  </span>When documentation
+is out of date it can spread confusion and false information requiring added
+work to correct.<span style="mso-spacerun: yes">  </span>The team including
+customers and testers work each feature from conception to functioning, clean,
+tested code.<span style="mso-spacerun: yes">   </span>The Customer provided the
+Pull of value from the team by specifying features during each
+Iteration-planning meeting.<span style="mso-spacerun: yes">  </span>Planning
+took 4-8 hours every two weeks and involved the whole team.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>Conversing People also gave the project a high
+level of transparency.<span style="mso-spacerun: yes">   </span>As new
+programmers joined in the middle of the project they often remarked how odd it
+was that we told the customer on a daily basis the state of the project, even
+when the news was unpleasant.<span style="mso-spacerun: yes">  </span>This
+transparency quickly helped improve the customer relationship.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>These imperatives have lead to a project where
+everyone knew exactly what work had been completed, and unquestionably
+finished.<span style="mso-spacerun: yes">  </span>The ability to deliver
+features independently provides a lean software process with the concept of
+small batch sizes. The code was always working while requirements, designs, and
+code were continuously improved to increase Flow.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><a
+name="_Toc3110042"></a><a name="_Toc3110120"></a><a name="_Toc3110466"></a><a
+name="_Toc3711372"></a><a name="_Toc3713275"></a><a name="_Toc3864454"></a><a
+name="_Toc30151028"></a><a name="_Toc30219985"></a><a name="_Toc30411953"></a><a
+name="_Toc30412089"></a><a name="_Toc30412119"></a><a name="_Toc30421242"></a><a
+name="_Toc30421747"></a><a name="_Toc30566811"></a><a name="_Toc30566964"></a><a
+name="_Toc30567301"></a><a name="_Toc30567385"></a><a name="_Toc30574927"></a><a
+name="_Toc30744728"><span style='mso-bookmark:_Toc30574927'><span
+style='mso-bookmark:_Toc30567385'><span style='mso-bookmark:_Toc30567301'><span
+style='mso-bookmark:_Toc30566964'><span style='mso-bookmark:_Toc30566811'><span
+style='mso-bookmark:_Toc30421747'><span style='mso-bookmark:_Toc30421242'><span
+style='mso-bookmark:_Toc30412119'><span style='mso-bookmark:_Toc30412089'><span
+style='mso-bookmark:_Toc30411953'><span style='mso-bookmark:_Toc30219985'><span
+style='mso-bookmark:_Toc30151028'><span style='mso-bookmark:_Toc3864454'><span
+style='mso-bookmark:_Toc3713275'><span style='mso-bookmark:_Toc3711372'><span
+style='mso-bookmark:_Toc3110466'><span style='mso-bookmark:_Toc3110120'><span
+style='mso-bookmark:_Toc3110042'>SPL Approach Detail</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>SPL team members followed a set of practices
+that allowed for Lean Software Development known as Extreme Programming
+(XP).<span style="mso-spacerun: yes">  </span>There are three groups of
+practices: Customer practices, Team practices, and Programming practices. <a
+name="_Toc3110043"></a><a name="_Toc3110121"></a><a name="_Toc3110467"></a><a
+name="_Toc3711373"><span style='mso-bookmark:_Toc3110467'><span
+style='mso-bookmark:_Toc3110121'><span style='mso-bookmark:_Toc3110043'></span></span></span></a></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:_Toc3711373'><span
+style='mso-bookmark:_Toc3110467'><span style='mso-bookmark:_Toc3110121'><span
+style='mso-bookmark:_Toc3110043'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></p>
+
+<h4><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+style='mso-bookmark:_Toc3711373'><span style='mso-bookmark:_Toc3110467'><span
+style='mso-bookmark:_Toc3110121'><span style='mso-bookmark:_Toc3110043'><a
+name="_Toc3713277"></a><a name="_Toc3864455"></a><a name="_Toc30421243"></a><a
+name="_Toc30421748"><span style='mso-bookmark:_Toc30421243'><span
+style='mso-bookmark:_Toc3864455'><span style='mso-bookmark:_Toc3713277'>The
+Customer Practices</span></span></span></a></span></span></span></span></span></span></span></span></span></span></h4>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Iteration Planning <o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>At the beginning of an iteration (lasting 2 –
+3 weeks) the whole team met with the requirements team and determined the exit
+criteria for a successful iteration.<span style="mso-spacerun: yes"> 
+</span>The requirements team determined what needed to be done next providing
+the Pull of Value. The programming team estimated the effort required.<span
+style="mso-spacerun: yes">  </span>Then the group calculated what reasonably
+fit into the allocated time frame.<span style="mso-spacerun: yes">  </span>The
+meeting goal was to set clear, measurable, realistic, and attainable short-term
+goals. </span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>On-site Customer<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>During any software development effort issues
+occur in layers.<span style="mso-spacerun: yes">  </span>Often questions about
+requirements are not apparent until the code is being written.<span
+style="mso-spacerun: yes">  </span>At that point a programmer is forced to
+either make assumptions or stop work until the correct answer is found.<span
+style="mso-spacerun: yes">  </span>These lead to defects and re-work if the
+assumption is wrong, or waiting if work stops.<span style="mso-spacerun:
+yes">   </span>By seating the domain experts with the team the programmers are
+given answers as needed, so that programming can progress without work
+stoppage.<span style="mso-spacerun: yes">  </span>Flow is maintained.<span
+style="mso-spacerun: yes">  </span>Also a small batch size allows that all
+questions about the feature currently under development are handled at the same
+time while fresh in everyone’s mind.</span></span></span></span></span></span></p>
+
+<h4><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><a
+name="_Toc3110044"></a><a name="_Toc3110122"></a><a name="_Toc3110468"></a><a
+name="_Toc3711374"></a><a name="_Toc3713278"></a><a name="_Toc3864456"><span
+style='mso-bookmark:_Toc3713278'><span style='mso-bookmark:_Toc3711374'><span
+style='mso-bookmark:_Toc3110468'><span style='mso-bookmark:_Toc3110122'><span
+style='mso-bookmark:_Toc3110044'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></a></span></span></span></span></span></span></h4>
+
+<h4><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+style='mso-bookmark:_Toc3864456'><span style='mso-bookmark:_Toc3713278'><span
+style='mso-bookmark:_Toc3711374'><span style='mso-bookmark:_Toc3110468'><span
+style='mso-bookmark:_Toc3110122'><span style='mso-bookmark:_Toc3110044'><a
+name="_Toc30421244"></a><a name="_Toc30421749"><span style='mso-bookmark:_Toc30421244'>Team
+Practices</span></a></span></span></span></span></span></span></span></span></span></span></span></span></h4>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Open Workspace<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>Allowing the programmers, testers, and
+functional team to sit together in the same workspace enhances communication
+about project issues.<span style="mso-spacerun: yes">   </span>For example,
+when development environment problems occurred, they occurred only once.<span
+style="mso-spacerun: yes">  </span>The first programmer to encounter the
+problem immediately warned the rest of the team.<span style="mso-spacerun:
+yes">  </span>This communication required no training.<span
+style="mso-spacerun: yes">  </span>It was simple.<span style="mso-spacerun:
+yes">  </span>The first affected programmer let out a spontaneous cry: <i>Oh No
+the database is down again!</i><span style="mso-spacerun: yes">  </span>The
+other programmers overheard and shifted to tasks that did not require the
+Database. Sometimes another programmer in earshot knew the solution.<span
+style="mso-spacerun: yes">  </span>At minimum we did not have individuals
+re-discovering the same problem for themselves.<span style="mso-spacerun:
+yes">  </span>Problem rediscovery is avoidable waste.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Pair-Programming<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>There is more to quality programming than
+typing speed.<span style="mso-spacerun: yes">  </span>Programming is not laying
+bricks!<span style="mso-spacerun: yes">  </span>Mistakes are expensive.<span
+style="mso-spacerun: yes">  </span>It is cheaper to review code while it is
+typed-in.<span style="mso-spacerun: yes">  </span>Also, Pair Programming has
+helped the team share insights about the design and the tools. Yet another
+benefit was that no one person became an information bottleneck.<span
+style="mso-spacerun: yes">  </span>Each task was worked on by at least two
+people.<span style="mso-spacerun: yes">  </span>If someone was ill at home, the
+other person picked up the task and continued.<span style="mso-spacerun: yes"> 
+</span>Information bottlenecks were prevented.<span style="mso-spacerun: yes"> 
+</span>Flow was preserved.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Collective Code Ownership<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>Any pair can extend or fix any piece of
+code.<span style="mso-spacerun: yes">  </span>On the other hand, under a system
+of Individual code ownership, individual programmers become production
+bottlenecks.<span style="mso-spacerun: yes">  </span>Collective Code Ownership
+only works when unit testing is in place.<span style="mso-spacerun: yes"> 
+</span>The tests guarantee the high code quality.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Coding Standard<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>The team has striven to write standard
+code.<span style="mso-spacerun: yes">  </span>The goal is that all code in the
+system looks similar.<span style="mso-spacerun: yes">  </span>The standard was
+partially written, partially in the team culture.<span style="mso-spacerun:
+yes">  </span>They talked freely about how to handle new challenges, and how to
+code them clearly.<span style="mso-spacerun: yes">  </span>The standard grew
+out of experience and was updated as new needs appeared.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Sustainable Pace<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>Some software development projects oscillate
+between phases of boredom and panic.<span style="mso-spacerun: yes"> 
+</span>This becomes hard to manage because the productivity data swings
+wildly.<span style="mso-spacerun: yes">  </span>And scheduling of Flow becomes
+uneven. Sustainable Pace means that the team should work the same hours per
+week every week.<span style="mso-spacerun: yes">  </span>This provides
+management with predictable outcomes, and allows the team to be rested and
+alert while on the job.<span style="mso-spacerun: yes">  </span>Tired
+programmers write defective code.<a name="_Toc3110045"></a><a name="_Toc3110123"></a><a
+name="_Toc3110469"></a><a name="_Toc3711375"></a><a name="_Toc3713279"></a><a
+name="_Toc3864457"><span style='mso-bookmark:_Toc3713279'><span
+style='mso-bookmark:_Toc3711375'><span style='mso-bookmark:_Toc3110469'><span
+style='mso-bookmark:_Toc3110123'><span style='mso-bookmark:_Toc3110045'><span
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></span></span></span></span></a></span></span></span></span></span></span></p>
+
+<p class=MsoBodyTextIndent style='margin-left:0in'><span style='mso-bookmark:
+_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:
+_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:
+_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span style='mso-bookmark:
+_Toc3864457'><span style='mso-bookmark:_Toc3713279'><span style='mso-bookmark:
+_Toc3711375'><span style='mso-bookmark:_Toc3110469'><span style='mso-bookmark:
+_Toc3110123'><span style='mso-bookmark:_Toc3110045'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h4><span style='mso-bookmark:_Toc3864439'><span style='mso-bookmark:_Toc3713260'><span
+style='mso-bookmark:_Toc3711357'><span style='mso-bookmark:_Toc3110462'><span
+style='mso-bookmark:_Toc3110116'><span style='mso-bookmark:_Toc3110038'><span
+style='mso-bookmark:_Toc3864457'><span style='mso-bookmark:_Toc3713279'><span
+style='mso-bookmark:_Toc3711375'><span style='mso-bookmark:_Toc3110469'><span
+style='mso-bookmark:_Toc3110123'><span style='mso-bookmark:_Toc3110045'><a
+name="_Toc30421245"></a><a name="_Toc30421750"><span style='mso-bookmark:_Toc30421245'>Programming
+Practices</span></a></span></span></span></span></span></span></span></span></span></span></span></span></h4>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Simple Design<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>Over engineering can easily sidetrack a
+project by spending too much time on issues not directly related to customer
+needs.<span style="mso-spacerun: yes">  </span>Simple Design helps a team focus
+on the simplest thing that fulfills the requirements.<span style="mso-spacerun:
+yes">  </span>One of the SPL programmers commented that this was the cleanest
+code he had ever worked on.<span style="mso-spacerun: yes">  </span>The benefit
+of simpler code is that it is easier to extend and maintain.<span
+style="mso-spacerun: yes">  </span>In other words, programmers can code faster
+with simpler designs.<span style="mso-spacerun: yes">  </span>Simpler code is
+more modular.<span style="mso-spacerun: yes">  </span>One indication of overly
+complicated design is that it is hard to unit test.<span style="mso-spacerun:
+yes">  </span>Occasionally in SPL a code change caused multiple unit tests to
+break. This indicated that the tests were not focused enough and that the design
+was not simple enough.<span style="mso-spacerun: yes">  </span>Simple design is
+aided though continuous design improvement (Refactoring).<span
+style="mso-spacerun: yes">   </span>Simple Design allows for smaller
+incremental improvements and allows for an ongoing Flow of features. </span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Continuous Integration<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>A task is not done until the code is
+integrated into the single code stream shared by the team.<span
+style="mso-spacerun: yes">  </span>However, code can be integrated before the
+entire task is done.<span style="mso-spacerun: yes">  </span>The team could
+integrate at any point when all the unit tests pass.<span style="mso-spacerun:
+yes">  </span>In C++ we were able to integrate every 4-6 hours of work.<span
+style="mso-spacerun: yes">  </span>In Java we would integrate every 20 minutes
+to 2 hours.<span style="mso-spacerun: yes">  </span>As the length of time
+between integrations gets longer, the pain in integrating becomes
+disproportionately greater.<span style="mso-spacerun: yes">  </span>This
+encourages the programmers to integrate frequently.<span style="mso-spacerun:
+yes">  </span>Integration occurred at most on a daily basis.<span
+style="mso-spacerun: yes">  </span>Continuous integration works best in smaller
+2-hours cycles.<span style="mso-spacerun: yes">  </span>Our daily integrations
+caused some work to go slower than it should have because this cycle was too
+long.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Test First<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>SPL developed over 2400 tests.<span
+style="mso-spacerun: yes">  </span>The majority of those were unit tests.<span
+style="mso-spacerun: yes">  </span>With Test-First programming the test is
+written before the production code.<span style="mso-spacerun: yes">  </span>We
+knew we were finished when the tests passed.<span style="mso-spacerun: yes"> 
+</span>This gave clear exit criteria for tasks.<span style="mso-spacerun:
+yes">  </span>The growing suite of tests provided re-assurance as more features
+were added.<span style="mso-spacerun: yes">  </span>The team did a great job in
+testing.<span style="mso-spacerun: yes">  </span>Although they struggled with
+an underpowered programming environment where compile cycle times were a 20
+minutes long.<span style="mso-spacerun: yes">  </span>Such long cycle times
+forced the unit tests to grow bulkier than otherwise necessary.<span
+style="mso-spacerun: yes">  </span>The Java part of SPL demonstrated how small
+and focused the tests could be.<span style="mso-spacerun: yes">  </span>The
+Java team also showed how cycle times could occur in less than 1 minute.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><b>Refactoring<o:p></o:p></b></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>Left alone software systems tend to slip
+toward disorder.<span style="mso-spacerun: yes">  </span>As features are added
+often they extend the original design in unforeseen ways, leading to ever more
+ugly and brittle code.<span style="mso-spacerun: yes">  </span>Refactoring is
+the science of improving the design of existing code.<span style="mso-spacerun:
+yes">  </span>Improving a design allows further new features to be added
+quickly.<span style="mso-spacerun: yes">  </span>Refactoring in the C++ parts
+of SPL was minimally applied.<span style="mso-spacerun: yes">  </span>For the
+Java portion of SPL Refactoring was applied more aggressively and succeeded in
+exposing both dependency problems and coding errors.<span style="mso-spacerun:
+yes">  </span>The best way to build flexible code is to flex it.<span
+style="mso-spacerun: yes">  </span>Refactoring helped revealed design
+weaknesses early and so the team could fix them.<span style="mso-spacerun:
+yes">  </span>Refactoring on the C++ part of the project was greatly hampered
+by the long 20 min. cycle time and the difficulty in creating, and deleting
+classes in a difficult to use, heavily customized source control system.</span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc3864439'><span
+style='mso-bookmark:_Toc3713260'><span style='mso-bookmark:_Toc3711357'><span
+style='mso-bookmark:_Toc3110462'><span style='mso-bookmark:_Toc3110116'><span
+style='mso-bookmark:_Toc3110038'>We noticed that the practices reinforced each
+other.<span style="mso-spacerun: yes">  </span>For example, if programmers are
+asked to write test-first code alone, they usually did not write enough
+tests.<span style="mso-spacerun: yes">  </span>When not enough tests are
+written continuous Integration becomes more difficult because we didn’t know
+what was correct and what was broken.<span style="mso-spacerun: yes"> 
+</span>Without Constant Integration, Simple Design is difficult because long
+integration cycles encourage big elaborate designs.<span style="mso-spacerun:
+yes">  </span>And so on…</span></span></span></span></span></span></p>
+
+<span style='mso-bookmark:_Toc3110038'></span><span style='mso-bookmark:_Toc3110116'></span><span
+style='mso-bookmark:_Toc3110462'></span><span style='mso-bookmark:_Toc3711357'></span><span
+style='mso-bookmark:_Toc3713260'></span><span style='mso-bookmark:_Toc3864439'></span>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Two XP practices were not used for the SPL project.<span
+style="mso-spacerun: yes">  </span>They were: <i>Small Releases</i>, and <i>Metaphor</i>.<span
+style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>Small Releases is the practice of releasing to production in
+small pieces so that real-life production feed back is obtained.<span
+style="mso-spacerun: yes">  </span>The SPL project contract was for a one time
+big release after 18 months.<span style="mso-spacerun: yes">  </span>When the
+contract was written the customer was not aware of incremental approaches to
+project delivery.</p>
+
+<p class=MsoNormal>Metaphor attempts to provide conceptual integrity with a
+unifying mental picture of the application.<span style="mso-spacerun: yes"> 
+</span>By the time a metaphor was suggested for the project, the customer and
+programmers had already become attached to the technical vocabulary used to
+describe the system parts.<span style="mso-spacerun: yes">  </span>So they were
+not interested in switching the names they were already happy using. </p>
+
+<h3><a name="_Toc30411954"></a><a name="_Toc30412090"></a><a name="_Toc30412120"></a><a
+name="_Toc30421246"></a><a name="_Toc30421751"></a><a name="_Toc30566812"></a><a
+name="_Toc30566965"></a><a name="_Toc30567302"></a><a name="_Toc30567386"></a><a
+name="_Toc30574928"></a><a name="_Toc30744729"><span style='mso-bookmark:_Toc30574928'><span
+style='mso-bookmark:_Toc30567386'><span style='mso-bookmark:_Toc30567302'><span
+style='mso-bookmark:_Toc30566965'><span style='mso-bookmark:_Toc30566812'><span
+style='mso-bookmark:_Toc30421751'><span style='mso-bookmark:_Toc30421246'><span
+style='mso-bookmark:_Toc30412120'><span style='mso-bookmark:_Toc30412090'><span
+style='mso-bookmark:_Toc30411954'>Project #1 Highlights</span></span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc30411954'></span><span style='mso-bookmark:_Toc30412090'></span><span
+style='mso-bookmark:_Toc30412120'></span><span style='mso-bookmark:_Toc30421246'></span><span
+style='mso-bookmark:_Toc30421751'></span><span style='mso-bookmark:_Toc30566812'></span><span
+style='mso-bookmark:_Toc30566965'></span><span style='mso-bookmark:_Toc30567302'></span><span
+style='mso-bookmark:_Toc30567386'></span><span style='mso-bookmark:_Toc30574928'></span><span
+style='mso-bookmark:_Toc30744729'></span><span style='font-weight:normal'><o:p></o:p></span></h3>
+
+<p class=MsoNormal><i>On Time and On Budget</i></p>
+
+<p class=MsoNormal>To be precise: the 18-month SPL project was 2-weeks late,
+and 108% of budget.<span style="mso-spacerun: yes">  </span>The previous
+project using a plan driven phased-waterfall process with the same organization
+and technology was 200% of schedule and 800% of budget.<span
+style="mso-spacerun: yes">  </span>Management and the customer were very
+pleased with the SPL project.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4><a name="_Toc30421247"></a><a name="_Toc30421752"><span style='mso-bookmark:
+_Toc30421247'>Kaizen or the final sprint</span></a></h4>
+
+<p class=MsoNormal>For the first 14 months, the team and management were open
+to the concept of continuous improvement (Kaizen).<span style="mso-spacerun:
+yes">  </span>On-going improvements were made both to the process and to the
+software design. <span style="mso-spacerun: yes"> </span>The team held
+retrospectives every two-weeks in order to reflect upon and improve team
+performance.<span style="mso-spacerun: yes">   </span>The suppleness of
+software provided us with an added tool.<span style="mso-spacerun: yes"> 
+</span>When the team noticed that a repeated task took a long time, they would
+consider changes to the design as well as to the process.<span
+style="mso-spacerun: yes">  </span>The ability to quickly change the design to
+support the work is less available in manufacturing.<span style="mso-spacerun:
+yes">  </span>But certainly is valuable to apply to Lean Software
+Development.<span style="mso-spacerun: yes">    </span>Nevertheless, during the
+last 4 months of the project, the process and design seemed to solidify.<span
+style="mso-spacerun: yes">    </span>Suggested improvements were fewer.<span
+style="mso-spacerun: yes">  </span>Management received suggestions for
+improvement ever more skeptically.<span style="mso-spacerun: yes"> 
+</span>During the final sprint to the end improvement slowed and the focus
+turned back to working harder. </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4><a name="_Toc30219990"></a><a name="_Toc30421248"></a><a name="_Toc30421753"><span
+style='mso-bookmark:_Toc30421248'><span style='mso-bookmark:_Toc30219990'>Recovery
+Team</span></span></a></h4>
+
+<p class=MsoBodyText>Half way though the 18-month project, we had enough
+historical performance data to show that we would miss the deliverable date by
+two months.<span style="mso-spacerun: yes">  </span>We determined the slip 9
+months before the due date.<span style="mso-spacerun: yes">  </span>This early
+warning provided enough time to react.<span style="mso-spacerun: yes"> 
+</span>Yet at the time upper management was more concerned with a different
+project that was in crisis.<span style="mso-spacerun: yes">  </span>Three
+months went by.<span style="mso-spacerun: yes">  </span>Again, we recalculated
+and presented the data to management.<span style="mso-spacerun: yes"> 
+</span>We still had 6 months left to correct a 2-month shortfall.<span
+style="mso-spacerun: yes">  </span>The result was the creation of a separate
+recovery team to separately implement 4 of the remaining features.<span
+style="mso-spacerun: yes">  </span>The fact that we had deferred design on
+these features allowed us to shift the design to a new technology for the
+recovery team.<span style="mso-spacerun: yes">   </span>The recovery team is
+described in Case Study #2 below.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4><a name="_Toc30219989"></a><a name="_Toc30421249"></a><a name="_Toc30421754"><span
+style='mso-bookmark:_Toc30421249'><span style='mso-bookmark:_Toc30219989'>Pulling
+Value</span></span></a></h4>
+
+<p class=MsoBodyText>Early on in the project, the customer team said that a big
+architectural change would be needed to support a “big dreaded feature”.<span
+style="mso-spacerun: yes">  </span>During an early iteration planning meeting
+we talked about the details of the architectural change and the feature
+involved.<span style="mso-spacerun: yes">   </span>It was truly a big change
+and the programmers were concerned about how this would affect the
+schedule.<span style="mso-spacerun: yes">  </span>There was some concern
+whether it could be accomplished with the current technology.<span
+style="mso-spacerun: yes">  </span>The conversation was free flowing and wide
+ranging.<span style="mso-spacerun: yes">  </span>To focus the conversation we
+asked the customer if he wanted this implemented within the next two
+weeks.<span style="mso-spacerun: yes">  </span>There was a quite pause.<span
+style="mso-spacerun: yes">  </span>Then the customer switched gears and
+suggested that since we needed something right now, we should work on a
+different feature.<span style="mso-spacerun: yes">  </span>We then defined work
+for the next two weeks.<span style="mso-spacerun: yes">   </span>Every few
+iterations, the big dreaded feature would re-emerge.<span style="mso-spacerun:
+yes">  </span>Each time, we asked the customer to talk in terms of the next two
+weeks and the big dreaded feature was delayed for a more pressing feature.<span
+style="mso-spacerun: yes">   </span>Some of the programmers were worried about
+this approach.<span style="mso-spacerun: yes">  </span>They asked: “if this is
+so big, won’t we be in trouble if we don’t start to deal with it now?”<span
+style="mso-spacerun: yes">  </span>But the team focused on providing an even
+Flow of Value as Pulled by the customer during iteration planning.<span
+style="mso-spacerun: yes">  </span>Eventually, the customer stopped mentioning
+the big dreaded feature.<span style="mso-spacerun: yes">   </span>Months later,
+the team was within 2 iterations of project completion and one of the
+programmers asked: “what about the big dreaded feature?”<span
+style="mso-spacerun: yes">  </span>The customer waved him away.<span
+style="mso-spacerun: yes">  </span>“Well, we couldn’t ever really figure out
+what that was supposed to do.<span style="mso-spacerun: yes">  </span>So, we
+will go to production without it.”<span style="mso-spacerun: yes">  </span>This
+was a huge triumph for letting the customer Pull value while managing the
+Flow.<span style="mso-spacerun: yes">  </span>It may appear to be pure luck
+that the feature was not needed, something else is at work.<span
+style="mso-spacerun: yes">  </span>When the customer Pulls value, non-valuable
+features naturally fall to the end of the to-do list, as did the big dreaded
+feature.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4><a name="_Toc30219991"></a><a name="_Toc30421250"></a><a name="_Toc30421755"><span
+style='mso-bookmark:_Toc30421250'><span style='mso-bookmark:_Toc30219991'>Feedback
+and Customer Relationship</span></span></a><b><o:p></o:p></b></h4>
+
+<p class=MsoBodyText>The difficult project preceding SPL poisoned the
+relationship between the company and the customer.<span style="mso-spacerun:
+yes">  </span>Spending 800% of budget made the customer suspicious.<span
+style="mso-spacerun: yes">  </span>SPL was able to deliver small bits of
+working code to the customer at regular 2-week intervals.<span
+style="mso-spacerun: yes">  </span>Within two months the customer had warmed to
+the team.<span style="mso-spacerun: yes">  </span>After 8 months the main
+customer representative requested office space near the team so he did not need
+to work from a separate building.<span style="mso-spacerun: yes">  </span>The
+customer representative liked to see that when he specified a feature, it
+appeared in code a few days later.<span style="mso-spacerun: yes">   </span>At
+the beginning of the project the customer was detached and suspicious.<span
+style="mso-spacerun: yes">  </span>And by delivering short feedback loops and
+allowing him to Pull his own defined Value from the team the relationship
+improved.</p>
+
+<h4><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h4>
+
+<h4><a name="_Toc30219988"></a><a name="_Toc30421252"></a><a name="_Toc30421757"><span
+style='mso-bookmark:_Toc30421252'><span style='mso-bookmark:_Toc30219988'>Managing
+Flow</span></span></a></h4>
+
+<p class=MsoNormal>In the early stage of the project, the team had been
+struggling with test-first programming but managed to work their way up to 178
+unit tests.<span style="mso-spacerun: yes">  </span>To encourage them along we
+wrote the total number of tests on a large whiteboard at the entrance to the
+shared workspace.<span style="mso-spacerun: yes">   </span>I was gone for 3
+days helping out a different client.<span style="mso-spacerun: yes"> 
+</span>When I got back I noticed the number of tests was still stuck at
+178!<span style="mso-spacerun: yes">  </span>After three days?<span
+style="mso-spacerun: yes">  </span>I was shocked.<span style="mso-spacerun:
+yes">  </span>Had they stopped programming code using the test-first
+technique?<span style="mso-spacerun: yes">   </span>No, they had stopped
+programming entirely.<span style="mso-spacerun: yes">  </span>While I was gone
+the whole team went to meetings with the architect.<span style="mso-spacerun:
+yes">   </span>Flow had stopped and an architecture phase was inserted.<span
+style="mso-spacerun: yes">  </span>Architecture is an important element of
+software development.<span style="mso-spacerun: yes">  </span>But it too can
+and should be handled in the Flow of delivering business value.<span
+style="mso-spacerun: yes">  </span>I worked with the team to put practices in
+place so that future architecture was focused on the Flow of Value.<span
+style="mso-spacerun: yes">  </span>And they stopped having protracted,
+unfocused meetings</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1027" type="#_x0000_t75" style='position:absolute;
+ margin-left:517.15pt;margin-top:0;width:335.6pt;height:248.85pt;z-index:1;
+ mso-position-horizontal:right;mso-position-vertical:top;
+ mso-position-vertical-relative:line' o:allowoverlap="f">
+ <v:imagedata src="./LeanCaseStudy_files/image001.wmz" o:title=""/>
+ <v:textbox style='mso-next-textbox:#_x0000_s1027'/>
+ <w:wrap type="square"/>
+</v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Excel.Chart.8"
+ ShapeID="_x0000_s1027" DrawAspect="Content" ObjectID="_1104581202">
+</o:OLEObject>
+<![endif]><![endif]--><![if !vml]><img width=448 height=331
+src="./LeanCaseStudy_files/image002.gif" align=right hspace=12 v:shapes="_x0000_s1027"><![endif]><a
+name="_Toc30421253"></a><a name="_Toc30421758"><span style='mso-bookmark:_Toc30421253'>Waste
+from Rework</span></a></h4>
+
+<p class=MsoBodyText>One thing clear in retrospect was the waste caused by a
+lag of weeks between the code being created and the automated customer
+Acceptance tests being written.<span style="mso-spacerun: yes">  </span>There
+was a lag of about 2 weeks between the programmers finishing their tasks and
+the Acceptance test completion.<span style="mso-spacerun: yes">  </span>Inevitably,
+we would find that even though the unit tests validated all the functionally on
+the small scale, a number of defects would occur when everything was put
+together.<span style="mso-spacerun: yes">  </span>In order to correct the
+defects found in Acceptance testing, the team members had to re-visit the
+requirements.<span style="mso-spacerun: yes">  </span>Acceptance testing at the
+end caused rework.<span style="mso-spacerun: yes">  </span>The graph shows the
+number of tests completed per day.<span style="mso-spacerun: yes"> 
+</span>Acceptance tests are plotted in red and use the scale on the right
+(0-400).<span style="mso-spacerun: yes">  </span>Unit tests are plotted in dark
+blue and use the scale on the left (0-2400).<span style="mso-spacerun: yes"> 
+</span>As you can see Acceptance tests were started on day 53 of the project
+whereas unit testing was applied from the first day of coding.<span
+style="mso-spacerun: yes">   </span>Acceptance tests should be written
+immediately after a feature is requested and before the programmers begin work
+on the feature.<span style="mso-spacerun: yes">  </span>In teams since the SPL
+project, I have seen a dramatic reduction in wasteful re-work when Acceptance
+tests are written first. A standard tool for Acceptance testing before code is
+constructed is the fit framework <a style='mso-endnote-id:edn8' href="#_edn8"
+name="_ednref8" title=""><span class=MsoEndnoteReference>[Fi</span></a><span
+class=MsoEndnoteReference>t]</span></p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4><a name="_Toc30219993"></a><a name="_Toc30421254"></a><a name="_Toc30421759"><span
+style='mso-bookmark:_Toc30421254'><span style='mso-bookmark:_Toc30219993'>Bottle
+Necks and small batches</span></span></a> </h4>
+
+<p class=MsoBodyText>Database Administrator (DBA) time was shared among a
+number of projects including SPL.<span style="mso-spacerun: yes">  </span>This
+made it a typical bottleneck resource.<span style="mso-spacerun: yes"> 
+</span>A DBA was given project tasks based when a project expected to
+experience a “work stoppage”.<span style="mso-spacerun: yes">   </span>A tech
+lead from another traditional projects once asked: “When will SPL be blocked
+waiting for the DBA?”<span style="mso-spacerun: yes">  </span>Unfortunately for
+DBA scheduling purposes, SPL rarely blocked.<span style="mso-spacerun: yes"> 
+</span>Since SPL programmers had small atomic tasks to work on, so they could
+quickly shift to another small task when a needed resource was
+unavailable.<span style="mso-spacerun: yes">  </span>This was unfortunate
+because we did not have the threat of “work stoppage” so it was harder to argue
+for timely DBA attention.</p>
+
+<h2><a name="_Toc30151030"></a><a name="_Toc30219986"></a><a name="_Toc30411955"></a><a
+name="_Toc30412091"></a><a name="_Toc30412121"></a><a name="_Toc30421255"></a><a
+name="_Toc30421760"></a><a name="_Toc30566813"></a><a name="_Toc30566966"></a><a
+name="_Toc30567303"></a><a name="_Toc30567387"></a><a name="_Toc30574929"></a><a
+name="_Toc30744730"><span style='mso-bookmark:_Toc30574929'><span
+style='mso-bookmark:_Toc30567387'><span style='mso-bookmark:_Toc30567303'><span
+style='mso-bookmark:_Toc30566966'><span style='mso-bookmark:_Toc30566813'><span
+style='mso-bookmark:_Toc30421760'><span style='mso-bookmark:_Toc30421255'><span
+style='mso-bookmark:_Toc30412121'><span style='mso-bookmark:_Toc30412091'><span
+style='mso-bookmark:_Toc30411955'><span style='mso-bookmark:_Toc30219986'><span
+style='mso-bookmark:_Toc30151030'>Case Study 2: Spare Parts Logistics –
+Forecasting (SPL-F) Team</span></span></span></span></span></span></span></span></span></span></span></span></a>
+</h2>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>With 6 months to go
+in an 18-month schedule we calculated that the SPL project (see above) would be
+2 months late.<span style="mso-spacerun: yes">  </span>This was based on
+historical productivity data generated by the SPL team and on release planning
+estimates for the C++ based programming team.<span style="mso-spacerun: yes"> 
+</span>We determined that the last 4 features having to do with supply
+forecasting could be implemented separately.<span style="mso-spacerun: yes"> 
+</span>And decided to use a technology new for the company.<span
+style="mso-spacerun: yes">  </span>This added risk was justified because
+programmers in the new technology (Java) would be quicker to find. The
+SPL-Forecasting (SPL-F) team was the plan to recover the schedule.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>The manager was very
+happy with the high productivity and team spirit of the main SPL C++ team.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>And all agreed that
+the main team should not be disturbed.<span style="mso-spacerun: yes">  
+</span>A separate team would be started from scratch.<span style="mso-spacerun:
+yes">  </span>This would help us avoid the perils of Brooks law:<span
+style="mso-spacerun: yes">  </span><i>Adding people to a late project will make
+it later</i>. We were adding a separate team to separate features of a late
+project.<span style="mso-spacerun: yes">  </span>This was possible because our
+process handled one feature at a time.<span style="mso-spacerun: yes"> 
+</span>The features remained independent enough to break off and assign to this
+new team.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>By the time
+programmers were available we had only 2 months to deliver the
+application.<span style="mso-spacerun: yes">  </span>They were new to the
+company, and new to the process, but they had experience with Java and the
+development environment.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>We started writing
+tests, and began to define the code integration cycle.<span
+style="mso-spacerun: yes">  </span>The Customer team consisted of two in-house
+domain experts, a test coordinator, and a customer representative<a
+name="_Toc30151029"></a><a name="_Toc30219987"></a><a name="_Toc30411956"></a><a
+name="_Toc30412092"></a><a name="_Toc30412122"></a><a name="_Toc30421256"></a><a
+name="_Toc30421761"><span style='mso-bookmark:_Toc30421256'><span
+style='mso-bookmark:_Toc30412122'><span style='mso-bookmark:_Toc30412092'><span
+style='mso-bookmark:_Toc30411956'><span style='mso-bookmark:_Toc30219987'><span
+style='mso-bookmark:_Toc30151029'>.<span style="mso-spacerun: yes">   </span></span></span></span></span></span></span></a></span><span
+style='mso-bookmark:_Toc30421761'><span style='mso-bookmark:_Toc30421256'><span
+style='mso-bookmark:_Toc30412122'><span style='mso-bookmark:_Toc30412092'><span
+style='mso-bookmark:_Toc30411956'><span style='mso-bookmark:_Toc30219987'><span
+style='mso-bookmark:_Toc30151029'>The SPL-F Team delivered the needed features
+and made it possible for the SPL to deliver on time and on budget.</span></span></span></span></span></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc30421761'><span style='mso-bookmark:_Toc30421256'><span
+style='mso-bookmark:_Toc30412122'><span style='mso-bookmark:_Toc30412092'><span
+style='mso-bookmark:_Toc30411956'><span style='mso-bookmark:_Toc30219987'><span
+style='mso-bookmark:_Toc30151029'><a name="_Toc30566814"></a><a
+name="_Toc30566967"></a><a name="_Toc30567304"></a><a name="_Toc30567388"></a><a
+name="_Toc30574930"></a><a name="_Toc30744731"><span style='mso-bookmark:_Toc30574930'><span
+style='mso-bookmark:_Toc30567388'><span style='mso-bookmark:_Toc30567304'><span
+style='mso-bookmark:_Toc30566967'><span style='mso-bookmark:_Toc30566814'>Project
+2 Highlights</span></span></span></span></span></a></span></span></span></span></span></span></span>
+<span style='mso-bidi-font-weight:normal'><o:p></o:p></span></h3>
+
+<h4>Changing (Increasing) Requirements</h4>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>It was originally
+assumed that the requirements were well understood.<span style="mso-spacerun:
+yes">  </span>The 4 features were a re-implementation of an existing mainframe
+application.<span style="mso-spacerun: yes">  </span>The goal was to move it to
+Unix.<span style="mso-spacerun: yes">  </span>The team held an exploration
+meeting that gave a basic scope to the project.<span style="mso-spacerun:
+yes">  </span>Next we planned iteration #1.<span style="mso-spacerun: yes"> 
+</span>The goal was to plan work for one week.<span style="mso-spacerun: yes"> 
+</span>The programmers were a bit confused because so much was unclear at the
+same time.<span style="mso-spacerun: yes">  </span>The team had never used a
+Lean process, had never programmed in test-first style, and had never
+integrated software in progress every hour.<span style="mso-spacerun: yes"> 
+</span>They were quite suspicious of the value of Refactoring.<span
+style="mso-spacerun: yes">  </span>We were nervous since the time frame was
+short.<span style="mso-spacerun: yes">  </span>They worried that one simple
+step at a time would not lead to completion in 2 months.<span
+style="mso-spacerun: yes">  </span>I worried that they may not learn the
+process in time for productivity to improve.<span style="mso-spacerun: yes"> 
+</span>The time it takes before the productivity boost begins is not related to
+programmer skill.<span style="mso-spacerun: yes">  </span>It is related to
+programmer acceptance.<span style="mso-spacerun: yes">  </span>Until the tests
+are being written with care, few programmers believe that Refactoring can be
+effective.<span style="mso-spacerun: yes">  </span>The effectiveness comes not
+only from simplifying the code, but also in a confidence that complex features
+can emerge from simple features.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal>The original list of 4 features grew to 9.<span
+style="mso-spacerun: yes">  </span>The original 4 were broken into smaller
+features and additional features were added to handle issues of concurrency and
+data-clean-up that did not exist on the mainframe.<span style="mso-spacerun:
+yes">   </span>Requirements that appear well defined at the beginning often
+need to be adjusted when the details of implementation are considered.<span
+style="mso-spacerun: yes">  </span>Lean agility is a good answer to this
+phenomenon.<span style="mso-spacerun: yes">  </span>But while the list of
+features grew, th<a name="_Toc30151031"></a><a name="_Toc3110125"></a><a
+name="_Toc3110471"></a><a name="_Toc3711377"></a><a name="_Toc3713281"></a><a
+name="_Toc3864460"></a><a name="_Toc30421257"></a><a name="_Toc30421762"><span
+style='mso-bookmark:_Toc30421257'><span style='mso-bookmark:_Toc3864460'><span
+style='mso-bookmark:_Toc3713281'><span style='mso-bookmark:_Toc3711377'><span
+style='mso-bookmark:_Toc3110471'><span style='mso-bookmark:_Toc3110125'><span
+style='mso-bookmark:_Toc30151031'>e velocity of the team did too.</span></span></span></span></span></span></span></a></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30421762'><span
+style='mso-bookmark:_Toc30421257'><span style='mso-bookmark:_Toc3864460'><span
+style='mso-bookmark:_Toc3713281'><span style='mso-bookmark:_Toc3711377'><span
+style='mso-bookmark:_Toc3110471'><span style='mso-bookmark:_Toc3110125'><span
+style='mso-bookmark:_Toc30151031'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></span></span></span></span></p>
+
+<h4><span style='mso-bookmark:_Toc30421762'><span style='mso-bookmark:_Toc30421257'><span
+style='mso-bookmark:_Toc3864460'><span style='mso-bookmark:_Toc3713281'><span
+style='mso-bookmark:_Toc3711377'><span style='mso-bookmark:_Toc3110471'><span
+style='mso-bookmark:_Toc3110125'><span style='mso-bookmark:_Toc30151031'>Rapid
+feedback, Rapid learning</span></span></span></span></span></span></span></span></h4>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc30421762'><span
+style='mso-bookmark:_Toc30421257'><span style='mso-bookmark:_Toc3864460'><span
+style='mso-bookmark:_Toc3713281'><span style='mso-bookmark:_Toc3711377'><span
+style='mso-bookmark:_Toc3110471'><span style='mso-bookmark:_Toc3110125'><span
+style='mso-bookmark:_Toc30151031'>The timeline for the SPL-F team was very
+compressed yet the team was organized and delivered in 2-months</span></span></span></span></span></span></span></span><span
+style='mso-bookmark:_Toc3864460'><span style='mso-bookmark:_Toc3713281'><span
+style='mso-bookmark:_Toc3711377'><span style='mso-bookmark:_Toc3110471'><span
+style='mso-bookmark:_Toc3110125'><span style='mso-bookmark:_Toc30151031'>.<span
+style="mso-spacerun: yes">  </span>We found that a one-week iteration schedule
+was very powerful for learning and feedback.<span style="mso-spacerun: yes"> 
+</span>Inside of this we also held a brief meeting every morning for 15 minutes
+to review the previous day’s progress and coordinated current tasks.<span
+style="mso-spacerun: yes">  </span>The learning and course correction was very
+beneficial.</span></span></span></span></span></span></p>
+
+<span style='mso-bookmark:_Toc30151031'></span><span style='mso-bookmark:_Toc3110125'></span><span
+style='mso-bookmark:_Toc3110471'></span><span style='mso-bookmark:_Toc3711377'></span><span
+style='mso-bookmark:_Toc3713281'></span><span style='mso-bookmark:_Toc3864460'></span>
+
+<p class=MsoNormal><a name="_Toc30567305"></a><a name="_Toc30567389"></a><a
+name="_Toc30574931"><span style='mso-bookmark:_Toc30567389'><span
+style='mso-bookmark:_Toc30567305'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></a></p>
+
+<span style='mso-bookmark:_Toc30567305'></span><span style='mso-bookmark:_Toc30567389'></span><span
+style='mso-bookmark:_Toc30574931'></span>
+
+<h1><a name="_Toc30744732">Wrap up</a></h1>
+
+<h2><a name="_Toc30744733">Lean Principles and XP Practices</a></h2>
+
+<p class=MsoNormal>In the case studies above we have looked at how the XP
+practices support Lean principles.<span style="mso-spacerun: yes">  </span>Now
+we can look more closely at how the principles and practices fit together and
+what is missing.<span style="mso-spacerun: yes">  </span>Most Lean principles
+can be implemented by Extreme Programming (XP) practices. The Lean principles
+are: Value, Value Stream, Flow, Pull, &amp; Perfection.<span
+style="mso-spacerun: yes">  </span>Considered one at a time how are Lean
+principles supported by XP practices?</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>On an XP project the customer defines<b> Value</b>.<span
+style="mso-spacerun: yes">  </span>The XP-Customer refers to whoever provides
+the programmers with requirements.<span style="mso-spacerun: yes">  </span>An
+XP-Customer can be the end user, a product manager, or a team of domain
+experts.<span style="mso-spacerun: yes">  </span>The customer defines the value
+at three levels.<span style="mso-spacerun: yes">  </span>Release Planning and
+Iteration Planning (collectively known as the <i><u>Planning Game</u></i>) and
+during daily programming as an <i><u>On-Site Customer</u></i>.<span
+style="mso-spacerun: yes">  </span>During Release Planning the customer defines
+the features needed for the next small release typically (1-3 months of
+work).<span style="mso-spacerun: yes">  </span>During Iteration Planning the
+customer defines features for the next iteration (2-3 weeks of work).<span
+style="mso-spacerun: yes">  </span>The customer defines automated <u>Acceptance
+Tests</u> as the criteria for feature completion.<span style="mso-spacerun:
+yes">  </span>Then as an <i>On-Site Customer</i>, the customer answers
+fine-grain questions as they occur during the programming day.<span
+style="mso-spacerun: yes">  </span>A strictly enforced protocol insists that
+the customer must make all business decisions no matter how small.<span
+style="mso-spacerun: yes">  </span>The customer defines the Value.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>XP focuses on the programming aspects of software
+development.<span style="mso-spacerun: yes">  </span>XP does not provide
+practices that support the principle of <b>Value Stream</b>.<span
+style="mso-spacerun: yes">  </span>The Value Stream considers the needs of the
+customer in the broadest sense and examines how those needs are served from
+multiple sources.<span style="mso-spacerun: yes">  </span>The programming team
+is one part of that service.<span style="mso-spacerun: yes">  </span>A fuller
+application of Value Stream could be a helpful addition to projects using XP to
+construct software.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b>Flow</b> is supported in XP by many of the
+practices.<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>The team sits together in an<i> <u>Open Workspace</u></i> so
+that information is quickly shared.<span style="mso-spacerun: yes">   </span>If
+one programming pair encounters an environmental problem (i.e. a failed global
+build, or newly added operating system patch) other programming pairs do not
+repeat the effort of discovering the same problem.<span style="mso-spacerun:
+yes">  </span>This allows team members to devote their energy to maintaining Flow
+in more productive areas of the project work.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>In traditional projects critical-path analysis is often used
+to find the shortest way to fit dependent tasks together.<span
+style="mso-spacerun: yes">  </span>In XP as well as Lean Thinking dependencies
+are removed and tasks can be done in parallel.<span style="mso-spacerun: yes"> 
+</span><i><u>Pair Programming</u></i> lessens dependency on the knowledge of a
+particular individual.<span style="mso-spacerun: yes">  </span>If the person
+responsible for the completion of a task becomes ill, the other programmer
+continues the work and maintains Flow.<span style="mso-spacerun: yes">  
+</span><i><u>Collective Code Ownership</u></i> means that anyone can improve
+any part of the code.<span style="mso-spacerun: yes">  </span>In projects that
+rely upon individual code ownership work sometimes stops until the designated
+code owner provides some service.<span style="mso-spacerun: yes">  </span><i><u>Sustainable
+Pace</u></i> means that the team works a standard schedule from one week to the
+next.<span style="mso-spacerun: yes">  </span>This creates a more uniform output
+and allows for more accurate scheduling.<span style="mso-spacerun: yes"> 
+</span>Accurate scheduling then allows management to make wiser interventions
+to correct longer-term needs.<span style="mso-spacerun: yes">  </span>An
+example of this was management’s decision to recover the SPL schedule by
+spinning–off the SPL-F team.</p>
+
+<p class=MsoNormal><i><u>Metaphor</u></i> while not used in the project above
+is one way to provide conceptual integrity for a project.<span
+style="mso-spacerun: yes">  </span>Conceptual integrity is needed for all the
+team members to understand the inter-working parts of the project.<span
+style="mso-spacerun: yes">  </span><i><u>Simple Design</u> </i>helps a project
+avoid the ever-present danger of over-engineering.<span style="mso-spacerun:
+yes">  </span>Over engineering saps productive capacity from a team and
+redirects it toward seemingly important issues that have no customer
+relevance.<span style="mso-spacerun: yes">  </span><i>Simple Design</i> keeps a
+team focused on the requirements.</p>
+
+<p class=MsoNormal><i><u>Continuous Integration</u></i> provides a single
+stream of code that is continuously updated by the various programming
+pairs.<span style="mso-spacerun: yes">  </span>This insures that even intra-day
+changes are shared.<span style="mso-spacerun: yes">  </span>In a traditional
+process integration occurs every evening or every few weeks often causing
+broken global builds that disturb the production Flow.<span
+style="mso-spacerun: yes">  </span><i><u>Test First</u></i> programming
+insurers that features added to the code do not cause rippling defects in other
+parts of the code.<span style="mso-spacerun: yes">  </span>When the code is
+tested before it is integrated, integration becomes quick and secure.<span
+style="mso-spacerun: yes">   </span><i><u>Refactoring</u> </i>or continuous
+design improvement encourages an ongoing simplification of the work
+product.<span style="mso-spacerun: yes">  </span>The simplification makes
+defects based on overcomplicated code less likely.<span style="mso-spacerun:
+yes">  </span>And makes it easier to add future features.<i><o:p></o:p></i></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The practices of XP that support <b>Pull</b> are similar to
+the practices that support Value as discussed above.<span style="mso-spacerun:
+yes">  </span>At the same time the customer defines Value the customer also
+schedules it for production.<span style="mso-spacerun: yes">   </span><u>Release
+&amp; Iteration Planning</u>, <u>On-Site Customer</u>, and customer <u>Acceptance
+Testing</u> each provide a way to Pull the value from the team.</p>
+
+<p class=MsoIndexHeading><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>XP teams strive for <b>Perfection</b> in their ongoing
+efforts to improve the design and process.<span style="mso-spacerun: yes"> 
+</span>While not a defined XP practice, mot XP teams use the Iteration Planning
+meeting to conduct retrospectives.<span style="mso-spacerun: yes">  </span>This
+allows continuous process and design improvement.<span style="mso-spacerun:
+yes">  </span><i><u>Collective Code Ownership</u></i> allows and expects that
+anyone fix code wherever it is encountered.<span style="mso-spacerun: yes"> 
+</span><i><u>Open Workspace</u></i> allows team members to share insights with
+one another immediately.<span style="mso-spacerun: yes">  </span><i><u>Coding
+Standard</u></i> brings uniformity to the code. <i><u>Test First</u></i>
+programming assures that all code is tested.<span style="mso-spacerun: yes"> 
+</span><i><u>Refactoring</u></i> removes duplication and decreases
+variance.<span style="mso-spacerun: yes">  </span><i><u>Pair Programming </u></i>ensures
+that all code is reviewed for correctness as it is typed.</p>
+
+<h2><a name="_Toc30744734">Summary</a></h2>
+
+<p class=MsoNormal>The application of Lean Software Development in the form of
+the XP process was a great success in the cases described.<span
+style="mso-spacerun: yes">  </span>The customer was happy, the company made a
+profit, the software was of high quality, and the programmers felt proud of
+their work.<span style="mso-spacerun: yes">   </span>Lean thinking required
+some changes in culture, work habits, and workspace layout.<span
+style="mso-spacerun: yes">  </span>The success of this project proved the
+wisdom of making those needed changes.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b><span style='font-size:13.0pt;font-family:Arial'>References</span></b>:</p>
+
+</div>
+
+<div style='mso-element:endnote-list'><![if !supportEndnotes]><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<![endif]>
+
+<div style='mso-element:endnote' id=edn1>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn1' href="#_ednref1"
+name="_edn1" title=""><span class=MsoEndnoteReference>[RTI 2002]</span></a>
+“The Economic Impacts of Inadequate Infrastructure for Software Testing”,<span
+style="mso-spacerun: yes">  </span>A report by the National Institute of
+Standards and Technology.<span style="mso-spacerun: yes">  </span><a
+href="http://www.rti.org/">www.rti.org/</a></p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn2>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn2' href="#_ednref2"
+name="_edn2" title=""><span class=MsoEndnoteReference>[Beck 02]</span></a> <i>Software-In-Process,
+A New/Old Project Metric, </i>by Kent Beck, Three Rivers Institute</p>
+
+<p class=MsoEndnoteText><a href="http://www.threeriversinstitute.org/">www.threeriversinstitute.org/</a>&nbsp;</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn3>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn3' href="#_ednref3"
+name="_edn3" title=""><span class=MsoEndnoteReference>[Beck 03]</span></a> <i>Test-Driven
+Development, by Example, </i>by Kent Beck, June 2003</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn4>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn4' href="#_ednref4"
+name="_edn4" title=""><span class=MsoEndnoteReference>[Fit]</span></a> Fit
+Acceptance testing framework by Ward Cunningham et al.<span
+style="mso-spacerun: yes">  </span><a href="http://fit.c2.com/">http://fit.c2.com</a></p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn5>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn5' href="#_ednref5"
+name="_edn5" title=""><span class=MsoEndnoteReference>[WoJo 91]</span></a> The
+Machine That Changed the World, by Womack &amp; Jones 1991.</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn6>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn6' href="#_ednref6"
+name="_edn6" title=""><span class=MsoEndnoteReference>[WoJo 96]</span></a> Lean
+Thinking, by Womack and Jones, 1996</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn7>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn7' href="#_ednref7"
+name="_edn7" title=""><span class=MsoEndnoteReference>[Co 02]</span></a> Agile
+Software Development, by Alistair Cockburn.<span style="mso-spacerun: yes"> 
+</span>Chapter 3: Communicating, Cooperating Teams.<span style="mso-spacerun:
+yes">  </span>Shows that the richest and most effective communication channel
+is “2 people at the whiteboard”. </p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn8>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn8' href="#_ednref8"
+name="_edn8" title=""><span class=MsoEndnoteReference>[Fit]</span></a> Fit
+Acceptance testing framework by Ward Cunningham et al.<span
+style="mso-spacerun: yes">   </span><a href="http://fit.c2.com/">http://fit.c2.com</a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

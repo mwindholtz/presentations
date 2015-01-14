@@ -1,0 +1,282 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Email Template</TITLE>
+<META NAME="Template" CONTENT="C:\MSOffice\Winword\EMAIL.DOT">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<B><FONT FACE="Arial" SIZE=5><P ALIGN="CENTER"><A NAME="_Toc401990802"><A NAME="_Toc403271448"><A NAME="_Toc404997761">OPPSLA"97 Trip Report</A></A></B></FONT><FONT FACE="Arial" SIZE=2>,</P>
+<P ALIGN="CENTER">Mark Windholtz, 12 October 1997</A></P>
+</FONT><B><FONT FACE="Arial" SIZE=4><P>&nbsp;</P>
+<P>Contents</P>
+</B></FONT><FONT SIZE=2><P>Introduction&#9;</FONT><A HREF="#_Toc405802182">*</A>
+<B><FONT SIZE=2><P>The Four Themes&#9;</B></FONT><A HREF="#_Toc405802183">*</A></P><DIR>
+
+<FONT SIZE=2><P>Theme # 1: Meta-Level Development&#9;</FONT><A HREF="#_Toc405802184">*</A></P>
+<FONT SIZE=2><P>Theme # 2:  Java is THE language&#9;</FONT><A HREF="#_Toc405802185">*</A></P>
+<FONT SIZE=2><P>Theme # 3 Components&#9;</FONT><A HREF="#_Toc405802186">*</A></P>
+<FONT SIZE=2><P>Theme # 4: Patterns&#9;</FONT><A HREF="#_Toc405802187">*</A></P></DIR>
+
+<B><FONT SIZE=2><P>The Events&#9;</B></FONT><A HREF="#_Toc405802188">*</A></P><DIR>
+
+<FONT SIZE=2><P>Self-aware Software - Patterns For Designing Reflective Architectures&#9;</FONT><A HREF="#_Toc405802189">*</A></P>
+<FONT SIZE=2><P>Team Fusion-Systematic Software Development Using UML&#9;</FONT><A HREF="#_Toc405802190">*</A></P>
+<FONT SIZE=2><P>High Level Design with Use Case Maps&#9;</FONT><A HREF="#_Toc405802191">*</A></P>
+<FONT SIZE=2><P>Squeak Demo&#9;</FONT><A HREF="#_Toc405802192">*</A></P>
+<FONT SIZE=2><P>Software Reuse: Architecture, Process and Organization for Business&#9;</FONT><A HREF="#_Toc405802193">*</A></P>
+<FONT SIZE=2><P>Key Note:   The Computer Revolution Hasn't Happened Yet  ---   Alan Kay&#9;</FONT><A HREF="#_Toc405802194">*</A></P>
+<FONT SIZE=2><P>Distributed Applications on the Web&#9;</FONT><A HREF="#_Toc405802195">*</A></P>
+<FONT SIZE=2><P>Panel Discussion about High Performance Teams&#9;</FONT><A HREF="#_Toc405802196">*</A></P>
+<FONT SIZE=2><P>Aspect Oriented Programming&#9;</FONT><A HREF="#_Toc405802197">*</A></P>
+<FONT SIZE=2><P>Migrating Relational Data to an OODB: a Molecular Biology Experience&#9;</FONT><A HREF="#_Toc405802198">*</A></P>
+<FONT SIZE=2><P>Squeak&#9;</FONT><A HREF="#_Toc405802199">*</A></P>
+<FONT SIZE=2><P>Summary&#9;</FONT><A HREF="#_Toc405802200">*</A></P>
+<FONT SIZE=2><P>References&#9;</FONT><A HREF="#_Toc405802201">*</A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P></DIR>
+</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990803"><A NAME="_Toc403271449"><A NAME="_Toc404997762"><A NAME="_Toc404997881"><A NAME="_Toc405801845"><A NAME="_Toc405801941"><A NAME="_Toc405802084"><A NAME="_Toc405802182">Introduction</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>OOPSLA is the ACM's (Association for Computing Machinery) annual conference for Object Oriented Programming Systems Languages and Architecture.  While many computer conferences concern products and techniques that you can buy, OPPSLA conferences have always pointed the way to the newest practical and developing ideas in Object Oriented development.  In some ways OOPSLA is much more practical in terms of helping product development than other conferences because of OOPSLA focuses on problems and solutions.   A programmer can take ideas from an OOPSLA tutorial and make an immediate contribution to a current development project.  That same programmer may return from a product-oriented conference and only be able to make a recommendation to purchase some product.</P>
+<P>&nbsp;</P>
+<P>OOPSLA is a best-practices conference.  The presenters and panelists are people who build commercial systems.  Even the academics like Ralph Johnson study and evaluate production software development in real companies.  The problem with product focus in other conferences is that (according to marketing) all product ideas are good ideas.  At OOPSLA, one hears critical evaluation of emerging technologies.  One panel of framework experts discussed their difficulties and failures while working with frameworks.  This real-life honesty is not likely to come from a vendor selling a product or service.  These people are trying to advance the state of the art by sharing information freely.  There were also numerous success stories.  Especially encouraging was the project to replace the Chrysler payroll system.  The Chrysler team shared their "pair-programming" and code testing techniques as well as their initial failures early in the project cycle.  The resulting system is now paying 10,000 employees and will soon be scaled to pay the whole company.</P>
+<P>&nbsp;</P>
+<P>OOPSLA had 2225 attendees from 40 countries, including 53 Boeing attendees plus a dozen or so from Lockheed-Martin and McDonald-Douglas. </P>
+</FONT><B><FONT FACE="Arial" SIZE=4><P>&nbsp;</P>
+<P><A NAME="_Toc404997763"><A NAME="_Toc404997882"><A NAME="_Toc405801846"><A NAME="_Toc405801942"><A NAME="_Toc405802085"><A NAME="_Toc405802183">The Four Themes</A></A></A></A></A></A></P>
+</FONT><I><FONT FACE="Arial"><P><A NAME="_Toc401990804"><A NAME="_Toc403271450"><A NAME="_Toc404997764"><A NAME="_Toc404997883"><A NAME="_Toc405801847"><A NAME="_Toc405801943"><A NAME="_Toc405802086"><A NAME="_Toc405802184">Theme # 1: Meta</A></A></A></A>-Level Development</A></A></A></A> </P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>By far the biggest theme at the conference was the increasing focus on Meta-level development.  This was brought out in Alan Kay's Keynote talk, in the talk about Aspect Oriented Programming,  in a few of the offered tutorials, and in the motivations and future direction of the Squeak development environment.  I'll talk about each of these in the sections below.</P>
+<P>&nbsp;</P>
+<P>Meta-level development allows order of magnitude increases in productivity and flexibility.  Basically, Meta-data is information about data. Relational Databases contain Meta-data since they have tables describing all the tables in the database.  This Meta-data allows the database to add and remove tables while it is running.  Since Meta-data is also data, the Meta-data can also have information about it, which is Meta-data about the Meta-data. This goes on forever. In OO systems, Meta-data provides information about the structure of the object hierarchy, the objects themselves, and (in some languages) about the behavior of the language itself.  This provides flexibility to query and (in some languages) to change the structure of the objects and classes.   Meta-level development allows us to move to a higher level of abstraction.  We are used to building programs to solve a problem.  With Meta-level tools and techniques, we build the program that builds the programs to solve multiple problems.  This increases programmer effectiveness enormously.  People have been programming with Meta for many years, especially in the Smalltalk and Lisp communities.  What is different now is that the wider OO world is starting to catch on to the benefits of Meta-Level programming.  </P>
+<P>A former colleague told me about the work he was doing in building a 7x24 system that processes banking information in C++.  Using patterns for Meta level development he built a design where he can load new C++ classes <I>at run time </I>(i.e. without stopping the system) so that they can extend the system without ever stopping it.  This is an example of the power of Meta-Level development in action. </P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990805"><A NAME="_Toc403271451"><A NAME="_Toc404997765"><A NAME="_Toc404997884"><A NAME="_Toc405801848"><A NAME="_Toc405801944"><A NAME="_Toc405802087"><A NAME="_Toc405802185">Theme # 2:  Java is THE language</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>A few years ago, I realized that the notation wars were over when most publications began expressing ideas in OMT notation.  However, while most people used OMT to express themselves, there still appeared articles about real-time systems that needed the special semantics of Booch notation. </P>
+<P>This year most tutorials and speakers used Java for the example code.  Java has become THE syntax for expressing ideas, idioms, and patterns.  The exception is when the topic is Meta-level development.  To show Meta ideas they use Java-like pseudo-code or Smalltalk.  Java makes it difficult to show Meta-level concepts for two reasons.  One reason is that while Java provides Meta-level interfaces in the java.lang.reflect package, showing an example requires lots of code because of the required exception handling.  This is easily handled by using Java-like pseudo-code.  The second and more important reason that showing Meta-level concepts is difficult in Java is that <I>in Java classes are not objects</I>.  Class definitions in Java are source code.  This means that the benefits of OO technology are not available to the developer, because the developer does not work with objects.  The Java developer works with source code and compilers.  One of these missing benefits is that Meta-level facilities are not available on text source code.   Dynamic languages like Smalltalk and Lisp allow the developer to work with objects. The classes are objects.  And the class objects are instances of a class called Class.  The class Class is an instance of a class called Metaclass.   This gives Meta-level control.</P>
+<P>In my tutorial on Meta-Level development some of the Java examples required multiple pages, as did the few C++ examples shown. The same examples were expressed in two or three lines of Smalltalk.  Java was the most used language for examples.  Smalltalk was used for examples of Meta programming.  C++ was rarely used.  The lack of Meta-level facilities may not appear to be a great current limitation in Java.  But as large systems are built we will start seeing the difficulties.  These will include class and package versioning conflicts; system availability vs. downtime; and difficulty in changing class hierarchies.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990806"><A NAME="_Toc403271452"><A NAME="_Toc404997766"><A NAME="_Toc404997885"><A NAME="_Toc405801849"><A NAME="_Toc405801945"><A NAME="_Toc405802088"><A NAME="_Toc405802186">Theme # 3 Components</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>Unfortunately, even though people are talking about Components it is difficult to find a good definition of <I>Component</I>.  The idea of software components or Software ICs (Integrated Circuits) has been around since Brad Cox described them in <I>Object Oriented Programming</I> [1986].  But they are now starting to be taken seriously. COM+, OpenDoc, and JavaBeans are all multi-platform Component models.  IBM is using JavaBeans as a multi-language component model for Java, Smalltalk, and C++. The talk by Noah Mendelsohn of Lotus addressed some very high level ideas about finding appropriate components.   The idea of components is entering the mainstream but the processes and the conceptual framework for dealing with them still needs to be developed. </P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990807"><A NAME="_Toc403271453"><A NAME="_Toc404997767"><A NAME="_Toc404997886"><A NAME="_Toc405801850"><A NAME="_Toc405801946"><A NAME="_Toc405802089"><A NAME="_Toc405802187">Theme # 4: Patterns</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>Patterns are to OO what algorithms are to procedural programming.</P>
+<P>Patterns are everywhere.  This fact was already established at last year's conference.  Patterns  are now an assumed part of the OO vocabulary.  The quality and volume of pattern documentation is increasing.  There are now three volumes of PLOP (Pattern Languages Of Programming) papers as well as the other architectural and analysis Pattern books available. </P>
+<P>&nbsp;</P>
+<P>Patterns are to OO what algorithms are to procedural programming.  A procedural programmer who does not know the sort algorithms will end up wasting time and writing too much code.  The same is now true for OO Programmers not familiar with Patterns.  The place to start is the classic "Design Patterns" [Gamma 1995]. Then look at the 3 PLOP books.  In the next few years, it will be difficult to be do up-to-date Object Oriented Programming without being familiar with the basic documented Patterns. </P>
+<P>Patterns: </FONT><A HREF="http://st-www.cs.uiuc.edu/users/patterns/patterns.html"><FONT FACE="Arial" SIZE=2>http://st-www.cs.uiuc.edu/users/patterns/patterns.html</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><FONT FACE="Arial" SIZE=4><P>&nbsp;</P>
+<P><A NAME="_Toc404997768"><A NAME="_Toc404997887"><A NAME="_Toc405801851"><A NAME="_Toc405801947"><A NAME="_Toc405802090"><A NAME="_Toc405802188">The Events</A></A></A></A></A></A></P>
+</FONT><I><FONT FACE="Arial"><P><A NAME="_Toc401990810"><A NAME="_Toc403271455"><A NAME="_Toc404997770"><A NAME="_Toc404997889"><A NAME="_Toc405801852"><A NAME="_Toc405801948"><A NAME="_Toc405802091"><A NAME="_Toc405802189">Self-aware Software - Patterns For Designing Reflective Architectures</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>Peter Sommerlad gave a good tutorial but spent a bit too time on elementary patterns.  His main example was the construction of a Video rental tracking application that could continue to run  while being extended to rent other items like bicycles.  Some of the patterns he discussed fit very well with Alan Kay's vision of 7x24 systems that can grow themselves.  Adaptive systems that are developed on the Meta-level and can be extended while running are very useful.  And Sommerlad provided some of the elementary patterns to implement such architecture.  The patterns discussed were the following:  </P>
+<I><P>&nbsp;</P>
+<U><P>Type Object</U> Pattern</I> allows swapping the class of an object at runtime.</P>
+<I><U><P>Property List</U> Pattern</I> allows dynamically defined attributes and attribute types.</P>
+<I><U><P>State Pattern</U> </I>allows changing the state of an object [Gamma 95]</P>
+<I><U><P>Null Object</U> Pattern</I> allows for flexible construction of OO applications.</P>
+<I><U><P>Anything</U> Pattern</I> allows a strongly types language to bind primitive datatypes dynamically.</P>
+<I><U><P>Strategy</U> Pattern</I> encapsulates behavior rules [Gamma 95]</P>
+<I><U><P>Facet</U> Pattern</I> protocols that can be added or removed at runtime.  This could provide similar functionality to the current Metaphase Insertion class concept.</P>
+<P>&nbsp;</P>
+<P>The last section of the tutorial involved the use of self-aware software in CORBA and JavaBeans Component models.</P>
+<P>&nbsp;</P>
+<P>Description: &#9;&#9;</FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp08.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp08.html#tutorial12</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Null Object Pattern: </FONT><A HREF="http://www.ksccary.com/nullobj.htm"><FONT FACE="Arial" SIZE=2>http://www.ksccary.com/nullobj.htm</FONT></A></P>
+<B><I><FONT FACE="Arial"><P><A NAME="_Toc401990811"><A NAME="_Toc403271456"><A NAME="_Toc404997771"><A NAME="_Toc404997890"><A NAME="_Toc405801853"><A NAME="_Toc405801949"><A NAME="_Toc405802092"><A NAME="_Toc405802190">Team Fusion-Systematic Software Development Using UML</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>The Fusion method from HP has been renamed Team-Fusion to emphasize the recent extensions for Distributed Team support.  The methodology has accepted the UML as its notation.   Team-Fusion is helpful in providing a distinct Architecture phase after Analysis and before Design.  It is at the architecture phase that components are determined. These can then be assigned to distributed teams.  Unfortunately, the book describing the new extensions is not yet ready.  And while the old Fusion book is very good, the current documentation on the extensions is not very stable or complete.  I look forward to seeing the finished methodology.</P>
+<P>&nbsp;</P>
+<P>Until then a more mainstream alternative to Fusion is <I><U>Objectory</I></U>. Objectory is the methodology supported by Rational for the UML.   It has been updated since the original OOSE by Ivar Jacobson.  Objectory now includes processes for components and architecture. The best intro to Objectory is <I>UML Distilled</I> by Martin Fowler.</P>
+<P>&nbsp;</P>
+<P>Fusion homepage: &#9;&#9;</FONT><A HREF="http://www.hpl.hp.com/fusion/"><FONT FACE="Arial" SIZE=2>http://www.hpl.hp.com/fusion/</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Evolutionary Fusion: &#9;</FONT><A HREF="http://www.hp.com:80/hpj/aug96/augart3.htm"><FONT FACE="Arial" SIZE=2>http://www.hp.com:80/hpj/aug96/augart3.htm</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Rational:   &#9;&#9;&#9;&#9;</FONT><A HREF="http://www.rational.com/"><FONT FACE="Arial" SIZE=2>http://www.rational.com</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Objectory Intro:&#9;&#9;&#9;</FONT><A HREF="http://www.rational.com/demos/o_process/ory/intro/intro3.htm"><FONT FACE="Arial" SIZE=2>http://www.rational.com/demos/o_process/ory/intro/intro3.htm</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Objectory Tutorial: &#9;&#9;</FONT><A HREF="http://www.rational.com/demos/o_process/"><FONT FACE="Arial" SIZE=2>http://www.rational.com/demos/o_process/</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Description: &#9;&#9;&#9;</FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp15.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp15.html#tutorial22</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990812"><A NAME="_Toc403271457"><A NAME="_Toc404997772"><A NAME="_Toc404997891"><A NAME="_Toc405801854"><A NAME="_Toc405801950"><A NAME="_Toc405802093"><A NAME="_Toc405802191">High Level Design with Use Case Maps</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>This tutorial presented a notation for mapping Use Cases to architectural components.  The notation is nice and allows one to show what parts of a system are involved in solving a particular problem.  Desmond D'Sousa used this type of notation over three years ago in mapping Scenarios to OMT static diagrams.  However, I don't see a lot of usefulness in this kind of exercise.   After one shows that a certain Use Case involves components A, B, and C, the question remains "So what?"   A methodologist should provide both defined input and useful output.  This is something I learned from Fusion.  Fusion is quite rigorous in guaranteeing that the work you do in one process step is used later in another process step.  These Use Case Maps, on the other hand, start from nowhere and lead nowhere.  When you are done creating Use Case maps for your system you can only sit back and say "Wow! Look at all the neat diagrams I generated!"   There is little practical value here.</P>
+<P>&nbsp;</P>
+<P>Description: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp24.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp24.html#tutorial38</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990813"><A NAME="_Toc403271458"><A NAME="_Toc404997773"><A NAME="_Toc404997892"><A NAME="_Toc404997769"><A NAME="_Toc404997888"><A NAME="_Toc405801855"><A NAME="_Toc405801951"><A NAME="_Toc405802094"><A NAME="_Toc405802192">Squeak Demo</A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>The event that was the most pure fun was the Squeak Demo.   Ward Cunningham and Kent Beck conducted a 9pm till midnight programming session in which the audience members yelled out requirements while two of the highest priced programming consultants in the universe wrote code in a language environment that was fairly new to them (i.e. Squeak).  The fun was also in the unique programming method that they used called "pair programming".   Chrysler used pair-programming to write their new payroll system.  Every line of production code was pair-programmed.  In pair-programming two people write code together at the computer: one on the keyboard and one standing behind.  Every idea is discussed and reviewed before it is entered as code. This style leads to higher quality and productivity.  The estimate was that each pair produced 2.5 weeks of work for every week the pair worked together.  I saw these two do pair programming, got to talk with the Chrysler team, saw Squeak in action, and missed a few hours sleep.   It was a blast!</P>
+<P>&nbsp;</P>
+<P>Chrysler project info: </FONT><A HREF="http://ic.net/~jeffries/rjchry.htm"><FONT FACE="Arial" SIZE=2>http://ic.net/~jeffries/rjchry.htm</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc405801856"><A NAME="_Toc405801952"><A NAME="_Toc405802095"><A NAME="_Toc405802193">Software Reuse: Architecture, Process and Organization for Business</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>Martin Griss from HP and Ivar Jocobson from Rational gave this talk. The software industry has long sought better ways of achieving software reuse.  Most of the effort has gone into better programming languages, tools, and techniques: COBOL, structured analysis and design, then OO languages and OOA&amp;D processes.  This way of accomplishing reuse may, however be reaching the end of the road.  What Griss and Jacobson say is that to get the real benefits of code reuse you need to build your organization around code reuse.  Why would you want to go to that trouble? What are the benefits of reuse?  In real-world project they have actual measurements showing the following benefits:</P>
+<P>&nbsp;</P></FONT>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=373>
+<TR><TD WIDTH="63%" VALIGN="TOP">
+<FONT FACE="Arial"><P>Time To Market Reductions</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Arial"><P>1.5  to  2 times</FONT></TD>
+</TR>
+<TR><TD WIDTH="63%" VALIGN="TOP">
+<FONT FACE="Arial"><P>Quality Improvements</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Arial"><P>5 to 10 times</FONT></TD>
+</TR>
+<TR><TD WIDTH="63%" VALIGN="TOP">
+<FONT FACE="Arial"><P>Maintenance Cost Reductions</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Arial"><P>2 to 5 times</FONT></TD>
+</TR>
+<TR><TD WIDTH="63%" VALIGN="TOP">
+<FONT FACE="Arial"><P>Development Cost Reductions</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Arial"><P>15% to 30%</FONT></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>The talk they showed a number of success stories that they have been involved in. These success stories occurred at companies like AT&amp;T, Brooklyn Union Gas, Ericsson AXS, HP, IBM, NETRON, REBOOT, and Microsoft. </P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>They provided the ten requirements for effective reuse:</P>
+<OL>
+
+<LI>Long-term management leadership.</LI>
+<LI>Use business engineering to systematically change organization &amp; process - incrementally.</LI>
+<LI>Design for domain-specific architected reuse.</LI>
+<LI>Design organization from process and organization framework that aligns with architecture, eg. Separate Create/Support/Utilize.</LI>
+<LI>Reuse analysis and design: not only code.</LI>
+<LI>Invest in infrastructure, support and training.</LI>
+<LI>Address culture, experience &amp; organization stability.</LI>
+<LI>Introduce change incrementally then scale up.</LI>
+<LI>Manage assets as product portfolios, product-line or product family in a layered architecture.</LI>
+<LI>Use Champions and change agents.</LI></OL>
+
+<P>&nbsp;</P>
+<P>The point is that while reuse has great benefits, the benefits can only come from an organization wide reengineering.  I'm afraid that this is probably too high of a cost for most software organizations in place today.  Jacobson's latest book discusses reuse and corporate reengineering software companies for reuse.  </P>
+<P>&nbsp;</P>
+<P>Description: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp31.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp31.html#tutorial46</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990814"><A NAME="_Toc403271459"><A NAME="_Toc404997774"><A NAME="_Toc404997893"><A NAME="_Toc405801857"><A NAME="_Toc405801953"><A NAME="_Toc405802096"><A NAME="_Toc405802194">Key Note:   The Computer Revolution Hasn't Happened Yet  ---   Alan Kay</A></A></A></A></A></A></A> </P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>Alan Kay is the guy who coined the term, "Object Oriented Programming"</A>.  And on the side he invented the while idea of OO and designed the first OO language, Smalltalk. </P>
+<P>&nbsp;</P>
+<P>Alan Kay came to computers from the field of Biology.  Biology provides examples of very complicated systems.  Even something as "simple" as a one-celled organism has the computational power of about 100 desktop computers.  In relation to biology, he finds computer programs very small and simplistic.  A lot can be learned by comparing the development processes of Biology and computers.  The way that biology develops is that it grows.  Cells split 50 times to form a human baby.  The way we develop software is mechanical and does not scale well.  Our tools force us to assemble software piece by piece. He asked sarcastically, "Who here is still working with a compile/link/load language"?  Well, of course, most people still do.  So he continued, "… that can be nothing but a dead end", since you cannot grow your system with statically linked languages.   And only by growing our systems will we be able to develop the complex systems we will need in the future. </P>
+<P>&nbsp;</P>
+<P>He noted that it is the 25<SUP>th</SUP> anniversary of Smalltalk.  Object Orientation has been with us a long time now.  But the industry hasn't yet taken full advantage of the ideas rooted in Biology that were developed two decades ago.  OO has been diverted off -track by partial-OO implementations.  Compromise languages like C++ are "hybrid languages" because they support both procedural and Object Oriented development.  Kay said, "When I invented the term <I>Object Orientation</I>, I did not have C++ in mind".  C++ and Java are also "strongly typed".  They require attention to detail as the developer pieces together interfaces.  Kay commented on this by pointing out that the development processes and tools of our industry are still "quite mechanical, as in interlocking gears".  </P>
+<P>&nbsp;</P>
+<P>He did, however, point out one example of a grown system written with compile/link/load languages: the Internet.  He said that since its origin as the ARPANET, the Internet has changed every line of its code base, increased in size 100 million times, and never stopped running.</P>
+<P>&nbsp;</P>
+<P>Returning to the idea of biological growth, we all know that DNA codes guide the growth of an organism.  DNA is an organism's Meta-Level programming.  The power of Meta is that you can define a code (like DNA) that guides the real code (skin, bones, &amp; gray matter).  This is what Kay would like to see more of, because it is the way to solve truly large-scale and complex programming problems.</P>
+<P>&nbsp;</P>
+<P>He showed a 1/2 page of LISP code, which defined the language itself in itself and asserted that   "LISP has more profound ideas in it than Smalltalk".  Smalltalk also has a very deep and flexible Meta-system but Kay probably doesn’t care which language gets the attention as long as it supports good Meta programming facilities.  Kay said, "The more a language can see it's own structure the more liberated one is."</P>
+<P>&nbsp;</P>
+<P>Kay showed the cover of a book titled: <I>The Art of the Meta-object Protocol</I> by Gregor Kiczales etal. (Kiczales presented "Aspect Oriented Programming" reviewed below).  According to Kay, this book is the most important one ever written on Meta-level development and promised a publicly presented award to anyone who re-writes the book so that normal people can understand it.  Perhaps we'll soon see a bunch of Meta-level books in the bookstores.</P>
+<P>&nbsp;</P>
+<P>Commenting on Java, he said that the "saddest aspect about Java is that has no Meta-System".  This confused me at first because I've worked with the java.reflection package.  But I soon realized that Java does not allow you much flexibility in <I>changing</I> classes or class behavior during runtime.  You can't, for instance, change the way messages are routed.  That's hard-coded in the language. </P>
+<P>&nbsp;</P>
+<P>Alan Kay said that Java is the "most personally distressing thing since MS-DOS".  Like MS-DOS, Java moves the industry away from dynamic and growable systems and toward the dead end path of static compile/link/load mechanical system construction.</P>
+<P>&nbsp;</P>
+<P>The end message was upbeat and challenging.  Kay told a story of E. Power Bigs, who asked an assistant to play a energetic song written for a large pipe organ, on a very small portable pipe organ.  When the assistant protested and asked "How can I play that song on this tiny pipe organ?"  E. Power Bigs replied: "Play it Grand!"</P>
+<P>&nbsp;</P>
+<P>In the same way, Alan Kay encouraged us.  No matter what tools we are required to work with, if we understand the benefits of Meta and include Meta programming in our systems we can code even static languages in a "Grand" manner.</P>
+<P>&nbsp;</P>
+<P>Description: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp61.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp61.html#tu0830</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990815"><A NAME="_Toc403271460"><A NAME="_Toc404997775"><A NAME="_Toc404997894"><A NAME="_Toc405801858"><A NAME="_Toc405801954"><A NAME="_Toc405802097"><A NAME="_Toc405802195">Distributed Applications on the Web</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>This talk concerned the problem of how to scale web communications to world-wide proportions. It made the point that Push and Pull are usually used together to provide solutions.  Relying on  pull alone, can overburden a server and leads to the kinds of failures now on the web. Push allows data caching at various levels.  The talk discussed a few schemes to mix Push and Pull in order to optimize network resources.</P>
+<P>&nbsp;</P>
+<P>The speaker gave an example from the new Fed-Ex tracking system.  Fed-Ex is building a distributed package tracking system that allows unlimited scalability based on a server subscribe mechanism similar to the Java listener idiom.  Performing queries against a database, which is updated from multiple sources, is a pull architecture.  Fed-Ex implemented a push architecture which allows client objects to subscribe to various distributed data sources.  The data sources then inform the listener when interesting events occur.  Fed-Ex claims that this architecture allows for better up-to-the-minute tracking.  Previous mainframe database architectures always were 20 minutes late.  You may already have seen the TV ads for this new Fed-Ex service. </P>
+<P>&nbsp;</P>
+<P>White papers and architecture: </FONT><A HREF="http://www.vitria.com/"><FONT FACE="Arial" SIZE=2>http://www.vitria.com/</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Description: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp61.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp61.html#tu1330</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990816"><A NAME="_Toc403271461"><A NAME="_Toc404997776"><A NAME="_Toc404997895"><A NAME="_Toc405801859"><A NAME="_Toc405801955"><A NAME="_Toc405802098"><A NAME="_Toc405802196">Panel Discussion about High Performance Teams</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>This panel discussion concerned managing teams in a changing environment and the proper balance of control vs. innovation.   Norm Kerth had the most interesting list of qualities for a high performance team.  According to Kerth, high performance teams have the following characteristics.  They:</P>
+
+<UL>
+<LI>know their domain or technology</LI>
+<LI>slow down when they run into a situation that is new</LI>
+<LI>contain highly specialized team members who respect each other</LI>
+<LI>talk freely about their skills and they pass responsibilities to the most qualified person</LI>
+<LI>are free to change their method</LI>
+<LI>have no "world-class" experts</LI>
+<LI>are not the top 5% in expertise, but they are in the top 20%</LI>
+<LI>discuss what worked and what didn't in their own efforts</LI>
+<LI>rarely add new people to the well balanced team</LI></UL>
+
+<P>&nbsp;</P>
+<P>Description:  </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp61.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp61.html#tu1530</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990817"><A NAME="_Toc403271462"><A NAME="_Toc404997777"><A NAME="_Toc404997896"><A NAME="_Toc405801860"><A NAME="_Toc405801956"><A NAME="_Toc405802099"><A NAME="_Toc405802197">Aspect Oriented Programming</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>Aspect Oriented Programming is not a replacement for OO, but another dimension to OO.</P>
+<P>AOP identifies the "Emerging Entities" of an object and provides a way to constrain or enhance their behavior.  Emerging Entities become Aspects.  But I'm not completely clear about the difference between an Emerging Entity and an Aspect.  I'll refer only to Aspects from now on.  Aspects are noticeable only when the program is running (i.e. only live objects have Aspects).  Aspects include descriptions on how the state of an object is loaded, shared, and routed.  Aspects are additional information about the Object attributes and methods that is not conventionally recorded in OO Analysis &amp; Design.  One category of Aspects describe the dynamics of concurrent method invocation.  Another category describes the authorized callers of a method, or even the call stack required.  I think that this will turn out to be a fairly important idea for large-scale and distributed systems because it will give us the tools we need to describe and constrain particular aspects of an objects behavior in a community of objects.   Because interface definition is not enough to guarantee well behaved objects.   Now the language to describe fuller more complete objects is developing.   Until the language is complete, we can at least keep in mind that this other dimension of Meta exists.  That awareness itself can help when designing complex systems.</P>
+<P>&nbsp;</P>
+<P>AOP homepage: &#9;</FONT><A HREF="http://www.parc.xerox.com/spl/projects/aop/"><FONT FACE="Arial" SIZE=2>http://www.parc.xerox.com/spl/projects/aop/</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Description: &#9;&#9;</FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp63.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp63.html#we0830</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc401990818"><A NAME="_Toc403271463"><A NAME="_Toc404997778"><A NAME="_Toc404997897"><A NAME="_Toc405801861"><A NAME="_Toc405801957"><A NAME="_Toc405802100"><A NAME="_Toc405802198">Migrating Relational Data to an OODB: </A>a Molecular Biology Experience</A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>Jon Oler, a programmer from the Utah Center for Human Genome Mapping, gave a presentation on what they did to move from a C++ framework encapsulating Relational DB access to ObjectStore Object Oriented Database. Their prime reason for moving to OODB was to get the increased performance and scalability.  They are satisfied with the boost in performance and are currently migrating all their applications to the OODB.  The side effect is that they have decreased their code base by 30% because they no longer need to do the OO to relational mapping.  Most of the techniques Oler presented dealt with the differences in object creation and deletion.  A few audience questions accused OODB technology of being "immature".  Jon responded, Object Store OODB worked well for the Human Genome project and the size of the database was staggering.  You have to decide if OODBs can work for you.</P>
+<P>&nbsp;</P>
+<P>Description: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp63.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp63.html#we1530</FONT></A></P>
+<B><I><FONT FACE="Arial"><P><A NAME="_Toc401990819"><A NAME="_Toc403271464"><A NAME="_Toc404997779"><A NAME="_Toc404997898"><A NAME="_Toc405801862"><A NAME="_Toc405801958"><A NAME="_Toc405802101"><A NAME="_Toc405802199">Squeak</A></A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>Alan Kay, the inventor of Object Oriented Programming and this year's Key Note Speaker is now working at Walt Disney Labs.  His latest project has been a new Smalltalk environment called Squeak.  I'd recommend reading the squeak story on the link below.  It tells how they used Squeak to write Squeak in a very short time.  Some of Squeak's features are: </P>
+<P>&nbsp;</P>
+<OL>
+
+<LI>Portability (to Mac, Windows, WinCE, and many flavors of Unix); </LI>
+<LI>Speed (it uses native C for compute-intensive code); </LI></OL>
+
+<OL START=2>
+
+<LI>Price (free, including all source code and the right to distribute applications!); and </LI></OL>
+
+<OL START=4>
+
+<LI>Sophistication (full Smalltalk-80 language, libraries, and tools). </LI>
+<LI>Completely provided source code.</LI></OL>
+
+<P>&nbsp;</P>
+<P>The Squeak system includes an integral Smalltalk-to-C translator; it is used to generate the Squeak virtual machine, the source for which is actually written in Smalltalk and then translated and compiled.   If you are interested in how virtual machines are built you can look though the Squeak source code. </P>
+<P>&nbsp;</P>
+<P>Squeak has a large range of platforms from Unix to WinCE, and a port to the Palm-Pilot may begin soon.  A typical IBM-Smalltalk Image size is around 10Meg, while Squeak on WinCE requires only 640K.  A headless squeak server image runs in only 240K !!  </P>
+<P>In Windows, squeak also can do 3-D real-time mapping.  The demo showed a 2000-polygon shape of a mouse's head being moved and rotated.  The shape was then texture mapped and moved again. </P>
+<P>&nbsp;</P>
+<P>Along with the small size it includes new technologies for multimedia and GUI development that I haven't seen anywhere else.  Multiple computers can be linked over the net and operate on the same image at the same time.  This allows two people to draw on the same picture at the same time or do concurrent editing of code within the same image.   Dan Ingalls made a mysterious comment about future development to add even more features for Meta programming.  Those who know Smalltalk probably understand that the Smalltalk Meta system is already customizable.  The mystery to me is what more they could add.  </P>
+<P> </P>
+<P>Squeak story:&#9;&#9;</FONT><A HREF="http://www.cosc.canterbury.ac.nz/~wolfgang/cosc205/squeak.html"><FONT FACE="Arial" SIZE=2>http://www.cosc.canterbury.ac.nz/~wolfgang/cosc205/squeak.html</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Squeak homepage: &#9;</FONT><A HREF="http://www.create.ucsb.edu/squeak/"><FONT FACE="Arial" SIZE=2>http://www.create.ucsb.edu/squeak/</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Description:&#9;&#9;&#9;</FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp66.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp/fp66.html#th1030</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>Reactions to squeak: </FONT><A HREF="http://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html"><FONT FACE="Arial" SIZE=2>http://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc403271466"><A NAME="_Toc404997781"><A NAME="_Toc404997900"><A NAME="_Toc405801863"></P>
+<P><A NAME="_Toc405801959"><A NAME="_Toc405802102"><A NAME="_Toc405802200">Summary</A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>OPPSLA"97 was enlightening and exciting.  This is the one chance during the year to see what the top developers in the world have been doing.  OOPSLA is not a product or language conference.  It is an ideas and experiences conference.  OOPSLA exposes the OO community to the rest of the world.  Last year we learned how patterns (coming from Architecture) can lead to improved software.  This year we learned how advances in Meta-object development (coming from AI) are critical to the next generation of large-scale and complex software systems.  OOPSLA is the only place where ideas from multiple disciplines converge to make building better Object Oriented software possible. </P>
+<P>&nbsp;</P>
+<P>The major theme was Meta level development.  Meta-level can and does yield important benefits. </P>
+<P>Java is the language of choice, except when discussing Meta-level ideas. </P>
+<P>&nbsp;</P>
+<P>My guess is that the architecture for the future will involve Java and Java security mechanisms as client side data delivery, and some dynamic, 7x24, organic, and adaptable server side language like Smalltalk or Lisp.  It is clear that Java cannot fulfill the need for systems that grow themselves.  So my guess is that some combination of technologies will be the most likely for year 2000+ development.</P>
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Arial"><P><A NAME="_Toc403271467"><A NAME="_Toc404997782"><A NAME="_Toc404997901"><A NAME="_Toc405801864"><A NAME="_Toc405801960"><A NAME="_Toc405802103"><A NAME="_Toc405802201">References</A></A></A></A></A></A></A></P>
+</B></I></FONT><FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>OOPSLA 1997: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/oopsla97/fp.html"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/oopsla97/fp.html</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>OOPSLA 1998: </FONT><A HREF="http://www.acm.org/sigplan/oopsla/"><FONT FACE="Arial" SIZE=2>http://www.acm.org/sigplan/oopsla/</FONT></A></P>
+<FONT FACE="Arial" SIZE=2><P>&nbsp;</P>
+<P>[POSA96] <I>Pattern-Oriented Software Architecture: A System of Patterns</I>; Buschmann etal; ; Wiley 1996</P>
+<P>&nbsp;</P>
+<P>[Gamma95] Design Patterns -Elements of reusable Object-Oriented Software; Gamma etal; Addison-Wesley 1995.</P>
+<P>&nbsp;</P>
+<P>[Fow96] Analysis Patterns; Martin Fowler; Addison-Wesley 1995</P>
+<P>&nbsp;</P>
+<P>[PLOP95] <I>Pattern Languages Of Program Design-1</I>; Coplien et al; Addison-Wesley 1995</P>
+<P>&nbsp;</P>
+<P>[PLOP96] <I>Pattern Languages Of Program Design-2</I>; Vlissides et al; Addison-Wesley 1996</P>
+<P>&nbsp;</P>
+<P>[PLOP97] <I>Pattern Languages Of Program Design-3</I>; Buschmann et al; Addison-Wesley 1997</P>
+<P>&nbsp;</P>
+<P>[PLOP98] <I>Pattern Languages Of Program Design-4</I>;  [not yet available]</P>
+<P>&nbsp;</P>
+<P>[Kic91] <I>The Art of the Meta-object Protocol</I>; Geagor Kiczales et al.; MIT Press 1991</P>
+<P>&nbsp;</P></FONT></BODY>
+</HTML>
