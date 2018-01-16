@@ -1,0 +1,3 @@
+". runfit" runs fit
+". runtomcat" runs tomcat
+". findme" finds all processes being run by ottobuild 

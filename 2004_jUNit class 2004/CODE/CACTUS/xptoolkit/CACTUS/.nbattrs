@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<attributes version="1.0">
+   <fileobject name="MapperServlet.java">
+      <attr name="class_dependency_javax.servlet.http.HttpServlet" stringvalue="MapperServlet"/>
+   </fileobject>
+   <fileobject name="HappyServletTest.java">
+      <attr name="class_dependency_java.lang.Object" stringvalue="HappyServletTest"/>
+      <attr name="class_dependency_junit.framework.TestCase" stringvalue="HappyServletTest"/>
+      <attr name="class_dependency_org.apache.commons.cactus.ServletTestCase" stringvalue="HappyServletTest"/>
+   </fileobject>
+   <fileobject name="MapperTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.ServletTestCase" stringvalue="MapperTest"/>
+   </fileobject>
+   <fileobject name="MapperServletTest.java">
+      <attr name="class_dependency_junit.framework.TestCase" stringvalue="MapperServletTest"/>
+      <attr name="class_dependency_org.apache.commons.cactus.ServletTestCase" stringvalue="MapperServletTest"/>
+   </fileobject>
+   <fileobject name="HappyServlet.java">
+      <attr name="class_dependency_javax.servlet.http.HttpServlet" stringvalue="HappyServlet"/>
+   </fileobject>
+   <fileobject name="JNDILookupTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.ServletTestCase" stringvalue="JNDILookupTest"/>
+   </fileobject>
+</attributes>

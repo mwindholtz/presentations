@@ -1,0 +1,16 @@
+install new eclipse 2.?
+open JWCode.zip
+follow install instructions
+
+if ok then ok.
+
+review materials.
+
+else get latest JWCode from cvs and load it.
+is better?
+
+package according to same package structure in JWCode.zip
+re try installation steps.
+
+post zip file to ObjectWind.com
+

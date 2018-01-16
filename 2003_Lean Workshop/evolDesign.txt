@@ -1,0 +1,10 @@
+Types of software design
+
+- no design
+- Rad once only design
+- high level design and code
+- high-level/ low-level/ code
+- - design for static requirements.
+- - change process as needed
+- Test Driven Design
+- System ?, (eveolutionary design)

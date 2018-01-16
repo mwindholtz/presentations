@@ -1,0 +1,63 @@
+Day 01
+
+
+Lean Concepts presentation
+exercise in flow?
+Fitnesse testing
+exercise
+Iteration Planning
+execise
+Case Study of CSC?, BellSouth?
+Product Development Book stuff...
+ - SIP
+ - Business Models
+ - 
+
+Dollars Saved with Testing
+
+Testing for better Design
+Complexity and Evolution
+
+
+-------------------------------------------
+
+Traditional Project Manager Training
+
+1. Software Development Life Cycle (SDLC)
+2. PMI Knowledge Areas
+3. Schedule and Cost Estimating
+4. Critical Path Analysis, PERT/Gantt Charts
+5. Using Project Management Software
+6. Project Scope and Change Control
+7. Project Tracking and Schedule Control
+8. Testing and Quality Assurance
+9. Deployment and Support
+10. Risk Management
+11. Resource Management
+12. Contract/Vendor Management
+
+
+Lean Project Manager Training
+
+*1. Seeing Waste
+*2. Value Stream Mapping
+*3. Feedback
+*4. Iterations
+*5. Synchronization
+*6. Emergence
+*7. Options Thinking
+*8. Last Responsible Moment
+!9. Set-Based Development
+*10. Pull Systems
+!11. Queuing Theory
+!12. Cost of Delay
+!13. Self Determination
+*14. Motivation
+*15. Leadership
+*16. Expertise
+!17. Perceived Integrity
+!18. Conceptual Integrity
+*19. Testing
+*20. Refactoring
+!21. Contracts
+

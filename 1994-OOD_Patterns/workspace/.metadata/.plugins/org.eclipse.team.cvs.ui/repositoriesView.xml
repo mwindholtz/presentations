@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories-view>
+	<repository id=":pserver:Administrator@localhost:d:/cvs_data">
+		<module path="junitInternals">
+			<tag type="version" name="init"/>
+			<tag type="version" name="mww_idle_feature"/>
+		</module>
+	</repository>
+</repositories-view>

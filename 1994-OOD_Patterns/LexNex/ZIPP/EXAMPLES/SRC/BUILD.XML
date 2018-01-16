@@ -1,0 +1,51 @@
+<!-- JUnit build script using ant 1.4 -->
+<project name="junit" default="textui" basedir=".">
+	<target name="init">
+		<tstamp/>
+	</target>
+
+ 	<target name="build" depends="clean" >
+		<javac 
+			srcdir="."
+			destdir="."
+			debug="on"
+  		/>	
+	</target>
+
+
+	<target name="textui" depends="build">
+		<java classname="junit.textui.TestRunner" fork="yes">
+			<arg value="junit.samples.AllTests" />
+			<classpath>
+				<pathelement location="." />
+			</classpath>
+		</java>
+	</target>
+
+	
+	<target name="awtui" depends="build">
+		<java classname="junit.awtui.TestRunner" fork="yes">
+			<arg value="junit.samples.AllTests" />
+			<classpath>
+				<pathelement location="." />
+			</classpath>
+		</java>
+	</target>
+	
+	<target name="swingui" depends="build">
+		<java classname="junit.swingui.TestRunner" fork="yes">
+			<arg value="junit.samples.AllTests" />
+			<classpath>
+				<pathelement location="." />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="clean"> 
+		<delete includeemptydirs="yes" failonerror="no">
+			<fileset dir="." includes="**/*.class"/>
+		</delete>
+	</target>
+
+
+</project>

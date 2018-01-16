@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates><codetemplate context="constructorcomment_context" description="Comment for created constructors" enabled="true" name="constructorcomment">/**
+ * ${tags}
+ */</codetemplate><codetemplate context="typecomment_context" description="Comment for created types" enabled="true" name="typecomment">/**
+ * @author ${user}
+ *
+ * To change the template for this generated type comment go to
+ * Window&amp;gt;Preferences&amp;gt;Java&amp;gt;Code Generation&amp;gt;Code and Comments
+ */</codetemplate><codetemplate context="methodcomment_context" description="Comment for non-overriding methods" enabled="true" name="methodcomment">/**
+ * ${tags}
+ */</codetemplate><codetemplate context="overridecomment_context" description="Comment for overriding methods" enabled="true" name="overridecomment">/* (non-Javadoc)
+ * ${see_to_overridden}
+ */</codetemplate><codetemplate context="newtype_context" description="Newly created files" enabled="true" name="newtype">/*
+ * Created on ${date}
+ *
+ * To change the template for this generated file go to
+ * Window&amp;gt;Preferences&amp;gt;Java&amp;gt;Code Generation&amp;gt;Code and Comments
+ */
+${package_declaration}
+
+${typecomment}
+${type_declaration}</codetemplate><codetemplate context="catchblock_context" description="Code in new catch blocks" enabled="true" name="catchblock">// ${todo} Auto-generated catch block
+${exception_var}.printStackTrace();</codetemplate><codetemplate context="methodbody_context" description="Code in created method stubs" enabled="true" name="methodbody">// ${todo} Auto-generated method stub
+${body_statement}</codetemplate><codetemplate context="constructorbody_context" description="Code in created constructor stubs" enabled="true" name="constructorbody">${body_statement}
+// ${todo} Auto-generated constructor stub</codetemplate></templates>

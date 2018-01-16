@@ -1,0 +1,76 @@
+Needs: struts testing
+       Web testing htmlUnit, jwebunit, httpunit
+       Patterns: Mock and anon inner classes.
+       Refactoring
+
+What is jUnit?
+- History
+- - Why not println()?
+- - Why not Guru testing?
+- Philosophy
+- - Atomic, Repeatable, Simple, 
+- - Scalable, Automated
+- - Limits of Unit testing
+- Installation
+- - classpath
+- - Eclipse/WSAD config
+- - run self tests
+- Exercise: Install and Self-Test
+
+jUnit Overview
+- testMethod
+- - assertTrue()
+- - failure, error, pass
+- - assertEquals(), fail(), etc.
+- TestCase class
+- - setup() tearDown()
+- TestSuite class
+- - setup() tearDown()
+- UML of jUnit
+- Exercise: Short Quiz
+
+Writing Tests
+- Simplest Test that could possible break
+- - Adding a test in Ecipse/WSAD
+- - Adding a suite in Ecilpse/WSAD
+- - Testing in Ecilpse/WSAD
+- - Command line Testing
+- Vector Example
+- HashMap Example
+- Money Example
+- How to not test the wrong thing
+- Exercise: Write java.util.* Tests
+
+(Lunch Break)
+
+30 min - Strategies
+- Tests as Documentation
+- Testing for Integration
+- Design Considerations for Testing
+- Mock Objects, Self-Shunts, Stubs 
+- Testing Legacy Code
+- Testing as you go
+- Testing First
+3 hour - Exercise: Test-First
+  (1) net games, 5 by 5 fishing net.
+      each intersection holds something or not.
+      [create net]
+      [isOccupied?]
+      [addItem]
+  (2) grid is now 8X8
+  (3) each intersection has black/white/nothing
+      [isWhite]
+      [isBlack]
+      [isEmpty]
+      [isValidPlay]
+
+Techniques and Tools
+- Testing Techniques
+- - Removing Duplicate Setup/TearDown
+- - Multithread Tests
+- - Repeated Tests
+- - Testing Exceptions
+- - Database
+- Ant integration
+- Extending jUnit
+- Free Add-Ons for jUnit

@@ -1,0 +1,46 @@
+From: Ron Jeffries [ronjeffries@acm.org]
+Sent: Saturday, April 26, 2003 1:43 AM
+To: industrialxp@yahoogroups.com
+Subject: Re: [industrialxp] Evolutionary Design
+
+On Friday, April 25, 2003, at 11:13:23 PM, Russ Rufer wrote:
+
+>    http://www.sdmagazine.com/documents/s=7928/sdmsdw3d/sdmsdw3d.html
+
+> Evolutionary Design Practices are:
+
+> - Rapid Return on Investment
+> - Risk Reduction
+> - Backtracking
+> - Selective Automation
+> - Team Intelligence
+> - Walkthrough
+> - Spanning System
+> - Small Iterations
+> - Multiplicity & Selection
+> - Dead Reckoning
+
+> More details on each practice will be coming soon.
+
+Sounds sweet. Make sense just as names (an outstanding accomplishment all
+on its own). More details will be valuable and welcome.
+
+XP-associated Evolutionary Design Practices. Love 'em.
+
+Ron Jeffries
+www.XProgramming.com
+XP says: Don't just sit on your DUF, do something. Get some feedback.
+
+
+------------------------ Yahoo! Groups Sponsor ---------------------~-->
+Get 128 Bit SSL Encryption!
+http://us.click.yahoo.com/xaxhjB/hdqFAA/bW3JAA/NhFolB/TM
+---------------------------------------------------------------------~->
+
+To unsubscribe from this group, send an email to:
+industrialxp-unsubscribe@yahoogroups.com
+
+ 
+
+Your use of Yahoo! Groups is subject to http://docs.yahoo.com/info/terms/ 
+

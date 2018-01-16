@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javadoclocation>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/rt.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/jsse.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/ext/localedata.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/jce.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/endorsed/xalan.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/ext/sunjce_provider.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/endorsed/sax.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/ext/dnsns.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/charsets.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/endorsed/xercesImpl.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/ext/ldapsec.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/sunrsasign.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/endorsed/dom.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+    <location_01 path="D:/j2sdk1.4.1_02/jre/lib/endorsed/xsltc.jar" url="http://java.sun.com/j2se/1.4.1/docs/api"/>
+</javadoclocation>

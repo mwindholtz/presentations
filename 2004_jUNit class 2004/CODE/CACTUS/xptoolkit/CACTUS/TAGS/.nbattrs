@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<attributes version="1.0">
+   <fileobject name="NumberedLinksTagTest.java">
+      <attr name="class_dependency_java.lang.Object" stringvalue="NumberedLinksTagTest"/>
+      <attr name="class_dependency_junit.framework.TestCase" stringvalue="NumberedLinksTagTest"/>
+      <attr name="class_dependency_org.apache.commons.cactus.JspTestCase" stringvalue="NumberedLinksTagTest"/>
+   </fileobject>
+   <fileobject name="ExampleTagTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.JspTestCase" stringvalue="ExampleTagTest"/>
+   </fileobject>
+   <fileobject name="ShowBodyTag.java">
+      <attr name="class_dependency_javax.servlet.jsp.tagext.TagSupport" stringvalue="ShowBodyTag"/>
+   </fileobject>
+   <fileobject name="ExampleTag.java">
+      <attr name="class_dependency_javax.servlet.jsp.tagext.BodyTagSupport" stringvalue="ExampleTag"/>
+   </fileobject>
+   <fileobject name="VarTei.java">
+      <attr name="class_dependency_javax.servlet.jsp.tagext.TagExtraInfo" stringvalue="VarTei"/>
+   </fileobject>
+   <fileobject name="VarTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.JspTestCase" stringvalue="NumberedLinksTagTest;VarTest"/>
+   </fileobject>
+   <fileobject name="VarTag.java">
+      <attr name="class_dependency_javax.servlet.jsp.tagext.TagSupport" stringvalue="VarTag"/>
+   </fileobject>
+   <fileobject name="NumberedLinksTag.java">
+      <attr name="class_dependency_javax.servlet.jsp.tagext.BodyTagSupport" stringvalue="NumberedLinksTag;CountTag"/>
+   </fileobject>
+   <fileobject name="ShowBodyTagTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.JspTestCase" stringvalue="ShowBodyTagTest"/>
+   </fileobject>
+</attributes>

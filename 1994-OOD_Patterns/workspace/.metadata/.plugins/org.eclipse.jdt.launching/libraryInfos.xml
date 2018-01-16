@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryInfos>
+    <libraryInfo home="D:\J2SDK1.4.1_02\jre" version="1.4.1_02-b06">
+        <bootpath>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\xercesImpl.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\xalan.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\xsltc.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\dom.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\sax.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\rt.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\i18n.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\sunrsasign.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\jsse.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\jce.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\charsets.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="D:\J2SDK1.4.1_02" version="1.4.1_02-b06">
+        <bootpath>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\xercesImpl.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\xalan.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\xsltc.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\dom.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed\sax.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\rt.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\i18n.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\sunrsasign.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\jsse.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\jce.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\charsets.jar"/>
+            <entry path="D:\J2SDK1.4.1_02\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="D:\J2SDK1.4.1_02\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+</libraryInfos>

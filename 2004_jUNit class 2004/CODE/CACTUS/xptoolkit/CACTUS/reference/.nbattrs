@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<attributes version="1.0">
+   <fileobject name="InsulterTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.ServletTestCase" stringvalue="InsulterTest"/>
+   </fileobject>
+   <fileobject name="CompileCheckTest.java">
+      <attr name="class_dependency_org.apache.commons.cactus.JspTestCase" stringvalue="CompileCheckTest"/>
+   </fileobject>
+</attributes>

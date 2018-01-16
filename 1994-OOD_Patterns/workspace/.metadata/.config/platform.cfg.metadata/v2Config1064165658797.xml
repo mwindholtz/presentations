@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- File written by Update manager 2.0 -->
+<!-- comments in this file are not preserved -->
+
+<configuration date="1064165658797" timeline="1064165658797" >
+   <site url="file:D:/eclipsePatterns/"
+      platformURL="platform:/base/"
+      enable="true"
+      policy="1" >
+      <feature configured = "true" url="features/org.eclipse.platform_2.1.1/" />
+      <feature configured = "true" url="features/org.eclipse.jdt_2.1.1/" />
+      <feature configured = "true" url="features/org.eclipse.pde_2.1.0/" />
+      <feature configured = "true" url="features/org.eclipse.platform.win32.source_2.1.1/" />
+      <feature configured = "true" url="features/org.eclipse.sdk.win32_2.1.1/" />
+      <feature configured = "true" url="features/org.eclipse.platform.win32_2.1.1/" />
+      <feature configured = "true" url="features/org.eclipse.platform.source_2.1.1/" />
+      <feature configured = "true" url="features/org.eclipse.jdt.source_2.1.1/" />
+   </site>
+
+   <activity action="3" 
+      label="file:D:/eclipsePatterns/" 
+      date="1064165659608" 
+      status="0">
+   </activity>
+
+   <activity action="8" 
+      label="file:D:/eclipsePatterns/workspace/.metadata/.config/platform.cfg.metadata/v2LocalSite.xml" 
+      date="1064165659618" 
+      status="0">
+   </activity>
+
+</configuration>
+

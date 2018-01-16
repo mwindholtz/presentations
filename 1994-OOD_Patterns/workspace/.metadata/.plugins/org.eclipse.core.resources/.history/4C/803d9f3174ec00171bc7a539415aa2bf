@@ -1,0 +1,9 @@
+/*
+MWW
+
+ * */
+package junit.framework;
+
+public class IdleTestError extends Exception {
+
+}

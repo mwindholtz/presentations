@@ -1,0 +1,23 @@
+Topics for the Lean Workshop
+
+Theory of project management (ObsoleteTheory.pdf)
+Florida vs. Minnisoda (johnson.pdf)
+LeanSD
+- XP 
+- Scrum ?
+- RUP
+- FDD
+
+Testing First and foremost
+- Acceptance tests
+- xUnit
+- Ftinesse
+
+Features & Schedules
+- Options trading
+- Net Present Value (XPOptions.pdf)
+- SIP
+
+Action Items
+- Ten Cheap Actions.doc
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchHistory>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests (2).launch&quot;/>
+" mode="run"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;TestRunner.launch&quot;/>
+" mode="run"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests (1).launch&quot;/>
+" mode="run"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests.launch&quot;/>
+" mode="run"/>
+    <lastLaunch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests (2).launch&quot;/>
+" mode="run"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests (2).launch&quot;/>
+" mode="debug"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;TestRunner.launch&quot;/>
+" mode="debug"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests (1).launch&quot;/>
+" mode="debug"/>
+    <launch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests.launch&quot;/>
+" mode="debug"/>
+    <lastLaunch
+        memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;launchConfiguration local=&quot;true&quot; path=&quot;AllTests (2).launch&quot;/>
+" mode="debug"/>
+</launchHistory>

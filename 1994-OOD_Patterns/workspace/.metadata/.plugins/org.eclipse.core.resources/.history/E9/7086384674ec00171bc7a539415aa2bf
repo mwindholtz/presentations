@@ -1,0 +1,14 @@
+/*
+MWW
+
+ * */
+package junit.framework;
+
+public class IdleTestError extends Exception {
+
+	String fName;
+	public IdleTestError(String fName) {
+		this.fName = fName;
+	}
+
+}

@@ -1,0 +1,17 @@
+/*
+MWW
+
+ * */
+package junit.framework;
+
+public class IdleTestError extends Exception {
+
+	/**
+	 * @param fName
+	 */
+	public IdleTestError(String fName) {
+		
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,60 @@
+What is jUnit?
+- History
+- - Why not println()?
+- - Why not Guru testing?
+- Philosophy
+- - Atomic, Repeatable, Simple, 
+- - Scalable, Automated
+- - Limits of Unit testing
+- Installation
+- - classpath
+- - Eclipse/WSAD config
+- - run self tests
+- Exercise: Install and Self-Test
+
+jUnit Overview
+- testMethod
+- - assertTrue()
+- - failure, error, pass
+- - assertEquals(), fail(), etc.
+- TestCase class
+- - setup() tearDown()
+- TestSuite class
+- - setup() tearDown()
+- UML of jUnit
+- Exercise: Short Quiz
+
+Writing Tests
+- Simplest Test that could possible break
+- - Adding a test in Ecipse/WSAD
+- - Adding a suite in Ecilpse/WSAD
+- - Testing in Ecilpse/WSAD
+- - Command line Testing
+- Vector Example
+- HashMap Example
+- Money Example
+- How to not test the wrong thing
+- Exercise: Write java.util.* Tests
+
+(Lunch Break)
+
+Strategies
+- Tests as Documentation
+- Testing for Integration
+- Design Considerations for Testing
+- Mock Objects, Self-Shunts, Stubs 
+- Testing Legacy Code
+- Testing as you go
+- Testing First
+- Exercise: Test-First
+
+Techniques and Tools
+- Testing Techniques
+- - Removing Duplicate Setup/TearDown
+- - Multithread Tests
+- - Repeated Tests
+- - Testing Exceptions
+- - Database
+- Ant integration
+- Extending jUnit
+- Free Add-Ons for jUnit
